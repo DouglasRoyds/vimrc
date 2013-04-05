@@ -1,0 +1,11 @@
+.VimballRecord
+.netrwhist
+autoload/
+doc/
+douglas.add
+douglas.add.spl
+syntax/info.vim
+syntax/man.vim
+syntax/mangl.vim
+syntax/mankey.vim
+syntax/manphp.vim
