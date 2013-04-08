@@ -19,8 +19,7 @@ filetype off         " Required
 set runtimepath+=~/.vim/bundle/vundle/,$HOME/vimfiles/bundle/vundle
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
+" Vundle must manage Vundle (required)
 Bundle 'gmarik/vundle'
 
 " GitHub
