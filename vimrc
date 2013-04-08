@@ -350,7 +350,6 @@ command! Blame :!cvs annotate %
 
 command! -complete=file -nargs=+ Bzr  :!bzr <args>
 command! -complete=file -nargs=+ Cvs  :!cvs <args>
-command! -complete=file -nargs=+ Git  :!git <args>
 command! -nargs=+ Thes :!aiksaurus <args>
 
 "-------------------------------------- Taglist plug-in settings ------------------------------------------------------
