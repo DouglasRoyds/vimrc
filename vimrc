@@ -12,6 +12,29 @@
 set nocompatible
 set cpoptions-=a        " Don't change the alternate filename when using :read file
 
+"-------------------------------------- Vundle ------------------------------------------------------------------------
+" See https://github.com/gmarik/vundle
+
+filetype off         " Required
+set runtimepath+=~/.vim/bundle/vundle/,$HOME/vimfiles/bundle/vundle
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+
+" vim-scripts repos
+"Bundle 'L9'
+
+" Non-GitHub
+"Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " Required
+
 "-------------------------------------- Default settings --------------------------------------------------------------
 
 " Allow backspacing over everything in insert mode
