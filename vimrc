@@ -15,7 +15,8 @@ set cpoptions-=a        " Don't change the alternate filename when using :read f
 "-------------------------------------- Vundle ------------------------------------------------------------------------
 " See https://github.com/gmarik/vundle
 
-filetype off         " Required
+" Initialise
+filetype off
 set runtimepath+=~/.vim/bundle/vundle/,$HOME/vimfiles/bundle/vundle
 call vundle#rc()
 
@@ -325,9 +326,9 @@ vmap <Leader>// s/*<CR>/<Esc>P
 
 "-------------------------------------- Edit specific files -----------------------------------------------------------
 
-command! Vimrc split $MYVIMRC
+" Find my vimrc file, which is symlinked out of ~/.vim or $HOME/vimfiles (on Windows)
+command! Vimrc execute 'split '.findfile('vimrc', $HOME.'/.vim,'.$HOME.'/vimfiles')
 command! Tips  split ~/Documents/Technology/Open\ source\ software/Applications\ and\ projects/Editors/Text/VIM/tips.txt
-"command! Tips  !firefox ~/Documents/Technology/Open\ source\ software/Applications\ and\ projects/Editors/Text/VIM/tips.html<CR>
 
 "-------------------------------------- Custom commands ---------------------------------------------------------------
 
