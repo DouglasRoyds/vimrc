@@ -1,6 +1,7 @@
 .VimballRecord
 .netrwhist
 autoload/
+bundle/
 doc/
 douglas.add
 douglas.add.spl
