@@ -160,7 +160,9 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 "  -n          Line numbers
 "  $*          Not a Bash variable - this is a special notation to Vim to drop all parameters in here.
 "              Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
-set grepprg=egrep\ --exclude-dir={generated,.svn,tags}\ --exclude={*.html}\ -HIn\ $*
+"  --exclude   Grep seems to be fussy about the order of includes and excludes:
+"              It only respects includes that come before any exclude.
+set grepprg=egrep\ -HIn\ $*\ --exclude-dir={generated,.svn,tags}\ --exclude={*.html}
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
 
