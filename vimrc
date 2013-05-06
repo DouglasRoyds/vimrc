@@ -162,7 +162,7 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 "              Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
 "  --exclude   Grep seems to be fussy about the order of includes and excludes:
 "              It only respects includes that come before any exclude.
-set grepprg=egrep\ -HIn\ $*\ --exclude-dir={generated,.svn,tags}\ --exclude={*.html}
+set grepprg=egrep\ -HIn\ $*\ --exclude-dir={generated,.svn}\ --exclude={*.html,tags}
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
 
