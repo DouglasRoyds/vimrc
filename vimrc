@@ -41,7 +41,7 @@ filetype plugin indent on     " Required
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
 set backspace=indent,eol,start
 
-set history=50          " keep 50 lines of command line history
+set history=1000        " lines of command-line history
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 
