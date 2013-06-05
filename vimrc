@@ -172,12 +172,9 @@ set grepprg=egrep\ -HIn\ $*\ --exclude-dir={generated,.svn}\ --exclude={*.html,t
 "  Ctrl-F3 will be toggle highlight search
 nmap <F3>   :grep '<C-R><C-W>' -rn .
 nmap <S-F3> :grep <C-R><C-W> -rn .
-nmap <C-F3> :set hlsearch!<CR>
 imap <F3>   <C-O><F3>
 imap <S-F3> <C-O><S-F3>
 imap <C-F3> <C-O><C-F3>
-" Just because I can't get Ctrl-F3 to work in the console
-nmap <Leader>hls :set hlsearch!<CR>
 
 " Ctrl-F4 will close the current window and buffer
 " Use Ctrl-Shift-F4 if the file hasn't been saved
@@ -278,6 +275,9 @@ nmap <Leader>wr :silent !attrib -r %<CR>:set noreadonly<CR>
 
 " Write and source the current file (works for vimrc)
 nmap <Leader>ws :w<CR>:source %<CR>
+
+" Toggle search highlighting
+nnoremap <silent> <Leader>/ :set hlsearch!<CR>
 
 "-------------------------------------- Window and buffer behaviour ---------------------------------------------------
 
