@@ -5,10 +5,11 @@
 " Not protected with a g:loaded_scriptname variable, as I want to be able to edit and re-source it.
 
 function! s:source_project_vim_file()
-   let s:vim_project_file = findfile(".project.vim", ".;")
-   if s:vim_project_file != ""
-      execute "source " . s:vim_project_file
-   endif
+   try
+      execute "source " . findfile(".project.vim", ".;")
+   catch
+      " Silently do nothing
+   endtry
 endfunction
 
 augroup project_vim
