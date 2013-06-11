@@ -28,6 +28,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'jceb/vim-shootingstar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 
 " vim-scripts repos
 "Bundle 'L9'
@@ -277,9 +278,6 @@ nmap <Leader>wr :silent !attrib -r %<CR>:set noreadonly<CR>
 
 " Write and source the current file (works for vimrc)
 nmap <Leader>ws :w<CR>:source %<CR>
-
-" Toggle search highlighting
-nnoremap <silent> <Leader>/ :set hlsearch!<CR>
 
 "-------------------------------------- Window and buffer behaviour ---------------------------------------------------
 
