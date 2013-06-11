@@ -307,9 +307,9 @@ set showtabline=0
 " The file type should determine the resulting comment style.
 " Can I select a line or block comment according to visual or normal mode?
 " Kinda works:
-nmap <Leader>// I// <Esc>
+"nmap <Leader>// I// <Esc>
 " Almost kinda works:
-vmap <Leader>// s/*<CR>/<Esc>P
+"vmap <Leader>// s/*<CR>/<Esc>P
 "" Line comments
 "map <Leader># :s/^/#/<CR>                                   " Shell, gawk comment
 "map <Leader>/ :s/^/\/\/ /<CR>                               " C++ comment
