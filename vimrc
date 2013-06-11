@@ -24,6 +24,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " GitHub
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jceb/vim-shootingstar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 
