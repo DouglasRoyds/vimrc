@@ -157,15 +157,11 @@ set cdpath=.,,**5
 set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 
 " Grep
-"  egrep       Full regular expressions, saving confusion about which characters are special and which are not
-"  -H          Show the filename, even when only one file is searched
-"  -I          --binary-files=without-match, that is, ignore binary files
-"  -n          Line numbers
+" Using ack2 in place of grep.
+" See https://github.com/petdance/ack2
 "  $*          Not a Bash variable - this is a special notation to Vim to drop all parameters in here.
 "              Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
-"  --exclude   Grep seems to be fussy about the order of includes and excludes:
-"              It only respects includes that come before any exclude.
-set grepprg=egrep\ -HIn\ $*\ --exclude-dir={generated,.svn}\ --exclude={*.html,tags}
+set grepprg=ack\ -H
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
 
