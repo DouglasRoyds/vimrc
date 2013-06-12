@@ -5,12 +5,12 @@
 " The .project.vim file can optionally let b:project_file_find_next = 1 to continue the search upwards.
 
 function! s:source_project_vim_file()
-   let s:project_search_dir = expand('%:p:h')
+   let s:search_dir = expand('%:p:h')
    let b:project_file_find_next = 1
    while b:project_file_find_next
       " Default behaviour is not to continue searching upwards after sourcing .project.vim
       let b:project_file_find_next = 0
-      let s:project_file = findfile(".project.vim", s:project_search_dir . ';')
+      let s:project_file = findfile(".project.vim", s:search_dir . ';')
       try
          " In a try clause, as this plugin was failing in the presence of vim-fugitive
          execute "source " . s:project_file
@@ -34,7 +34,7 @@ function! s:source_project_vim_file()
       if s:project_file_dir !~ '^/'
          let s:project_file_dir = getcwd() . '/' . s:project_file_dir
       endif
-      let s:project_search_dir = substitute(s:project_file_dir, '/[^/]\+/$', '/', '')
+      let s:search_dir = substitute(s:project_file_dir, '/[^/]\+/$', '/', '')
    endwhile
 endfunction
 
