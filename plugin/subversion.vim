@@ -13,7 +13,7 @@ command! -nargs=1 SvnCat call SubversionCat(<q-args>)
 " Map an exit code == 1 to success, all other exit codes to failure
 nmap <Leader>vs :!svn status <Bar> egrep -v '^X\|external\|^$' <Bar><Bar> [ $? -eq 1 ] <cr>
 nmap <Leader>vdd :!svn diff -x-wu % \| colordiff<cr>
-nmap <Leader>vda :!svn diff -x-wu --no-diff-deleted \| colordiff<cr>
+nmap <Leader>vda :!svn diff -x-wu --no-diff-deleted \| colordiff \| less -r<cr>
 
 function! SubversionDiff(args)
    let targetFilename = expand("%")
