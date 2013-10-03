@@ -38,6 +38,11 @@ Bundle 'tpope/vim-unimpaired'
 
 filetype plugin indent on     " Required
 
+"-------------------------------------- Plug-in settings --------------------------------------------------------------
+
+" In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
+let g:gitgutter_realtime = 0
+
 "-------------------------------------- Default settings --------------------------------------------------------------
 
 " Allow backspacing over everything in insert mode
