@@ -10,3 +10,5 @@ syntax/man.vim
 syntax/mangl.vim
 syntax/mankey.vim
 syntax/manphp.vim
+view/
+vimball/
