@@ -212,7 +212,7 @@ nmap <c-K> 5k
 nmap <c-H> :normal <C-R>=winwidth(0)/2<CR>h<CR>
 nmap <c-L> :normal <C-R>=winwidth(0)/2<CR>l<CR>
 
-" zZ scrolls the cursor to centre of the screen horizontally
+" zZ scrolls the cursor to centre of the screen horizontally: zs, zZ, ze
 " zs leaves the cursor 3 places in from the left edge, like zt does
 " ze leaves the cursor 3 places in from the right edge, like zb does
 nnoremap zZ zs:normal <C-R>=winwidth(0)/2<CR>zh<CR>
