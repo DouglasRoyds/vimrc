@@ -24,6 +24,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " GitHub
+Bundle 'DouglasRoyds/local_vimrc.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jceb/vim-shootingstar'
 Bundle 'moll/vim-bbye'
@@ -41,6 +42,8 @@ Bundle 'vim-scripts/DirDiff.vim.git'
 filetype plugin indent on     " Required
 
 "-------------------------------------- Plug-in settings --------------------------------------------------------------
+
+let g:local_vimrc = '.project.vim'
 
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
 let g:gitgutter_realtime = 0
