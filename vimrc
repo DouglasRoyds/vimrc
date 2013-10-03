@@ -236,6 +236,9 @@ vnoremap <silent> T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
 nnoremap do :diffget<CR>]c
 nnoremap dp :diffput<CR>]c
 
+" I type :w<CR> in my code a lot
+inoremap :w<CR> <C-O>:w<CR>
+
 "-------------------------------------- Leader mappings ---------------------------------------------------------------
 
 " The \ key is inconveniently located on my work keyboard
