@@ -26,9 +26,11 @@ Bundle 'gmarik/vundle'
 " GitHub
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jceb/vim-shootingstar'
+Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/DirDiff.vim.git'
 
 " vim-scripts repos
 "Bundle 'L9'
