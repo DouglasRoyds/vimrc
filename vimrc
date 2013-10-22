@@ -27,6 +27,7 @@ Bundle 'gmarik/vundle'
 Bundle 'DouglasRoyds/local_vimrc.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jceb/vim-shootingstar'
+Bundle 'justinmk/vim-sneak'
 Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -209,7 +210,6 @@ nmap <M-Right> <Tab>
 
 " Make Y and S behave like other "capital" commands, and yank/substitute to the end of the line
 map Y y$
-map S c$
 
 " I prefer to move up and down display-line-wise, rather than text line-wise.
 nmap j gj
