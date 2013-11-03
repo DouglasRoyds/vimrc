@@ -49,6 +49,9 @@ let g:local_vimrc = '.project.vim'
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
 let g:gitgutter_realtime = 0
 
+nmap ff <Plug>SneakForward
+nmap FF <Plug>SneakBackward
+
 "-------------------------------------- Default settings --------------------------------------------------------------
 
 " Allow backspacing over everything in insert mode
