@@ -87,6 +87,9 @@ set foldlevelstart=1
 " File handling. Mac isn't in the default set
 set fileformats=unix,dos,mac
 set nobackup
+
+" Encryption
+" Use :X (that's an upper-case X) to turn on encryption for a file
 set cryptmethod=blowfish
 
 " Characters that form pairs for the % command
