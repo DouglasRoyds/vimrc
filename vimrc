@@ -87,6 +87,7 @@ set foldlevelstart=1
 " File handling. Mac isn't in the default set
 set fileformats=unix,dos,mac
 set nobackup
+set cryptmethod=blowfish
 
 " Characters that form pairs for the % command
 set matchpairs=(:),{:},[:]
