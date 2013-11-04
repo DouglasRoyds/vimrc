@@ -146,11 +146,13 @@ set printheader=%>%t%=Page\ %N
 
 "-------------------------------------- Spelling ----------------------------------------------------------------------
 
+" Use ctrl-X-K/P to browse dictionary completions
 set nospell
 set spelllang=en_nz
 set spellfile=~/.vim/douglas.add,~/.vim/code.add
 set spellsuggest=9
 
+" Use ctrl-X-T/P to browse thesaurus completions
 set thesaurus=~/.vim/mthesaur.txt
 
 "-------------------------------------- Searching ---------------------------------------------------------------------
