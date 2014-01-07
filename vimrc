@@ -32,6 +32,7 @@ Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/DirDiff.vim.git'
 
 " vim-scripts repos
