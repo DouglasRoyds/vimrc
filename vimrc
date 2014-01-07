@@ -99,7 +99,7 @@ set matchpairs=(:),{:},[:]
 set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe
 
 set wildmode=longest,list           " Tab complete till longest common string, then list all matches
-set diffopt=filler,vertical,iwhite  " Show filler lines, default to vertical diff, and ignore whitespace
+set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
 
 " Complete silence. No flashing, no beeping, nothing.
 " Turn the visualbell on, but set it to nothing at all
