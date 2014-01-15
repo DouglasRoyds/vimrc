@@ -55,13 +55,20 @@ nmap FF <Plug>SneakBackward
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
-" Allow backspacing over everything in insert mode
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
-set backspace=indent,eol,start
+set backspace=indent,eol,start   " Allow backspacing over everything in insert mode
 
-set history=1000        " lines of command-line history
-set ruler               " show the cursor position all the time
-set showcmd             " display incomplete commands
+set history=1000                    " lines of command-line history
+set ruler                           " show the cursor position all the time
+set showcmd                         " display incomplete commands
+set fileformats=unix,dos,mac        " Mac isn't in the default set
+set nobackup
+set cryptmethod=blowfish            " Use :X to turn on encryption for a file
+set matchpairs=(:),{:},[:]          " Characters that form pairs for the % command
+set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
+set listchars=eol:$,tab:T-,trail:.  " Special characters to display when :set list is on
+set wildmode=longest,list           " Tab complete till longest common string, then list all matches
+set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe     " Extensions to demote during tab-completion
 
 " Default indenting and wrap
 set autoindent          " Carry indent over to new lines
@@ -78,29 +85,11 @@ set nowrap                    " Off by default - I have mapped F6 to toggle wrap
 set whichwrap=b,s,<,>,[,]     " Move to previous/next line on BS, space, left/right keys in normal & insert modes
 set nostartofline             " Don't move the cursor to the start of the line on page up/down (ctrl-U/D etc)
 set display=lastline          " Show as much as possible of the last line on screen, rather than just the @ symbols
-set listchars=eol:$,tab:T-,trail:.	" Special characters to display when :set list is on
 
 " Text folding
 " These are Greg Bodnar's options, and I haven't investigated them yet
 set foldenable
 set foldlevelstart=1
-
-" File handling. Mac isn't in the default set
-set fileformats=unix,dos,mac
-set nobackup
-
-" Encryption
-" Use :X (that's an upper-case X) to turn on encryption for a file
-set cryptmethod=blowfish
-
-" Characters that form pairs for the % command
-set matchpairs=(:),{:},[:]
-
-" list suffix patterns that are less likely to be used during tab-completion
-set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe
-
-set wildmode=longest,list           " Tab complete till longest common string, then list all matches
-set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
 
 " Complete silence. No flashing, no beeping, nothing.
 " Turn the visualbell on, but set it to nothing at all
