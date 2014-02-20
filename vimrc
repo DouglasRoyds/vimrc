@@ -63,7 +63,8 @@ set ruler                           " show the cursor position all the time
 set showcmd                         " display incomplete commands
 set fileformats=unix,dos,mac        " Mac isn't in the default set
 set nobackup
-set mouse=a                         " Use the mouse in the console too. Shift-drag to select for X.
+set mouse=ni                        " Use the mouse in the console too, but only for normal and insert modes,
+                                    " that is, don't enter Visual mode with the mouse. Shift-drag to select for X.
 set cryptmethod=blowfish            " Use :X to turn on encryption for a file
 set matchpairs=(:),{:},[:]          " Characters that form pairs for the % command
 set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
