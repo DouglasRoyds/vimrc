@@ -313,10 +313,12 @@ set autowrite
 inoremap <C-^> <Esc><C-^>
 
 " I want new windows as big as possible, as I'll flick between them with <Leader>j and k
+" I prefer new vertical splits to appear on the right
 set winheight=999
 set noequalalways
 set browsedir=buffer
 set scrolloff=2
+set splitright
 
 " Ctrl-Tab to rotate between open buffers within the current window
 nmap <C-Tab> :bn<CR>
