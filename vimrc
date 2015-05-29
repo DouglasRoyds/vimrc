@@ -262,6 +262,7 @@ nnoremap dp :diffput<CR>]c
 
 " I type :w<CR> in my code a lot
 inoremap :w<CR> <C-O>:w<CR>
+inoremap :wq<CR> <C-O>:wq<CR>
 
 "-------------------------------------- Leader mappings ---------------------------------------------------------------
 
