@@ -121,6 +121,13 @@ if ! has('gui_running')
     set background=dark
 endif
 
+" I set the cursorline on with an autocmd on WinEnter (see the autocmds section below).
+" With the aid of vim-unimpaired, cursorcolumn can be toggled with coc
+highlight CursorLine cterm=none term=none
+highlight CursorLine ctermbg=234
+highlight CursorColumn cterm=none term=none
+highlight CursorColumn ctermbg=234
+
 " Brute-force.
 " TODO:  What's the elegant way of doing this?
 " Setting ctermfg=6 turns off the cterm=bold bit
