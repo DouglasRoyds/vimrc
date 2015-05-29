@@ -256,9 +256,12 @@ vnoremap <silent> T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
 " How can I map gT<movement character> to do this?
 
 " vimdiff
-" do and dp work fine, but they don't jump to the next diff
+" do and dp work fine, but they don't jump to the next diff.
+" In visual mode, do the get or put, but don't jump to the next diff.
 nnoremap do :diffget<CR>]c
 nnoremap dp :diffput<CR>]c
+vnoremap do :diffget<CR>
+vnoremap dp :diffput<CR>
 
 " I type :w<CR> in my code a lot
 inoremap :w<CR> <C-O>:w<CR>
