@@ -437,6 +437,9 @@ augroup vimrc
    autocmd BufLeave * let b:winview = winsaveview()
    autocmd BufEnter * if (exists('b:winview')) | call winrestview(b:winview) | endif
 
+   autocmd WinEnter * setlocal cursorline
+   autocmd WinLeave * setlocal nocursorline
+
 augroup END
 
 " Trim all trailing space on every write
