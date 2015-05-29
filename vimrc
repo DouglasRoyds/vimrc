@@ -135,6 +135,7 @@ highlight Comment ctermfg=6
 
 "-------------------------------------- Printing ----------------------------------------------------------------------
 
+" :hardcopy
 set printexpr=PrintFile(v:fname_in,v:cmdarg)
 function! PrintFile(fname,args)
    " gtklp provides a (somewhat OTT) print dialog for lpr
