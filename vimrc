@@ -17,11 +17,11 @@ set cpoptions-=a        " Don't change the alternate filename when using :read f
 
 " Initialise
 filetype off
-set runtimepath+=~/.vim/bundle/vundle.vim/,$HOME/vimfiles/bundle/vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim/,$HOME/vimfiles/bundle/Vundle.vim
 call vundle#rc()
 
 " Vundle must manage Vundle (required)
-Bundle 'gmarik/vundle.vim'
+Bundle 'gmarik/Vundle.vim'
 
 " GitHub
 Bundle 'DouglasRoyds/local_vimrc.vim'
