@@ -355,8 +355,7 @@ set showtabline=0
 
 "-------------------------------------- Edit specific files -----------------------------------------------------------
 
-" Find my vimrc file, which is symlinked out of ~/.vim or $HOME/vimfiles (on Windows)
-command! Vimrc execute 'split '.findfile('vimrc', $HOME.'/.vim,'.$HOME.'/vimfiles')
+command! Vimrc execute 'split '.$MYVIMRC
 command! Tips  split ~/Documents/Technology/Open\ source\ software/Applications\ and\ projects/Editors/Text/VIM/tips.txt
 
 "-------------------------------------- Custom commands ---------------------------------------------------------------
