@@ -180,8 +180,7 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 " Grep
 " Using ack2 in place of grep.
 " See https://github.com/petdance/ack2
-"  $*          Not a Bash variable - this is a special notation to Vim to drop all parameters in here.
-"              Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
+" Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
 set grepprg=ack\ -H
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
