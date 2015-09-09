@@ -164,13 +164,13 @@ set ignorecase
 set smartcase
 
 " File and directory search path:
-"   1. The current file's directory
-"   2. The current working directory
-"   3. All directories below the current working directory, but only 5 deep
-" When working within a project, I always (manually) set the current working
-" directory to the root of the project.
+"   1. . = The current file's directory
+"   2. ,, = The current working directory
+"   3. **5 = All directories below the current working directory, but only 5 deep
+" When working within a project, I always (manually) set the current working directory to the root of the project.
+" cdpath default value is taken from $CDPATH, with a , prepended to look in the current directory first.
 set path=.,,**5
-set cdpath=.,,**5
+set cdpath+=**5
 
 " Reduce the special characters that are recognised as part of a filename, to make gf more effective.
 " @      A-Z,a-z
