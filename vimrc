@@ -164,13 +164,13 @@ set ignorecase
 set smartcase
 
 " File and directory search path:
-"   1. The current file's directory
-"   2. The current working directory
-"   3. All directories below the current working directory, but only 5 deep
-" When working within a project, I always (manually) set the current working
-" directory to the root of the project.
+"   1. . = The current file's directory
+"   2. ,, = The current working directory
+"   3. **5 = All directories below the current working directory, but only 5 deep
+" When working within a project, I always (manually) set the current working directory to the root of the project.
+" cdpath default value is taken from $CDPATH, with a , prepended to look in the current directory first.
 set path=.,,**5
-set cdpath=.,,**5
+set cdpath+=**5
 
 " Reduce the special characters that are recognised as part of a filename, to make gf more effective.
 " @      A-Z,a-z
@@ -180,8 +180,7 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 " Grep
 " Using ack2 in place of grep.
 " See https://github.com/petdance/ack2
-"  $*          Not a Bash variable - this is a special notation to Vim to drop all parameters in here.
-"              Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
+" Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
 set grepprg=ack\ -H
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
@@ -256,10 +255,12 @@ vnoremap <silent> T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
 " vimdiff
 " do and dp work fine, but they don't jump to the next diff.
 " In visual mode, do the get or put, but don't jump to the next diff.
+" Further to vim-unimpaired's cod to toggle diffthis, I commonly want to just turn the lot off, hence coD
 nnoremap do :diffget<CR>]c
 nnoremap dp :diffput<CR>]c
 vnoremap do :diffget<CR>
 vnoremap dp :diffput<CR>
+nnoremap coD :diffoff!<CR>
 
 " I type :w<CR> in my code a lot
 inoremap :w<CR> <C-O>:w<CR>
