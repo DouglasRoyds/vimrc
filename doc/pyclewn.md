@@ -28,7 +28,6 @@ Set a solib-search-path (local debugging) or sysroot (cross-debugging) and a def
 
 For local debugging, we launch gdb with the target executable.
 
-    :lcd build/
     :Pyclewn gdb ./test_thing
 
 For remote debugging, just launch gdb, then connect to the remote server.
