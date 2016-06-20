@@ -4,8 +4,7 @@ Working with Pyclewn
 Installation
 ------------
 
-Although there are instructions online for
-[installing Pyclewn with Pathogen or Vundle|http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543],
+Although there are instructions online for [installing Pyclewn with Pathogen or Vundle][front end],
 they don't cover the Python part, meaning that you have to download the tarball and install it yourself.
 This doesn't make sense to me, as the Python code and vim scripts need to be in sync anyway.
 I am using a standard Pyclewn installation, following the default
@@ -15,6 +14,9 @@ I am using a standard Pyclewn installation, following the default
     $ python -c "import clewn; clewn.get_vimball()"
     $ vim -S pyclewn-2.3.vmb
     :q
+
+[front end]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
+
 
 Starting gdb
 ------------
