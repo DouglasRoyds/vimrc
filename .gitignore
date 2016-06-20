@@ -2,7 +2,8 @@
 .netrwhist
 autoload/
 bundle/
-doc/
+doc/*.txt
+doc/tags
 douglas.add
 douglas.add.spl
 syntax/info.vim
