@@ -24,7 +24,8 @@ Check gdb
 ---------
 
 Before getting tangled in Pyclewn, we can check that gdb is a flyer from the command line.
-If you're unfamiliar with gdb, work your way through the [Sample gdb session][gdb-sample] first.
+If you're unfamiliar with gdb, work your way through the [Sample gdb session][gdb-sample] first,
+or through [Faye Williams's excellent tutorial][faye-williams].
 
 In the build directory, set a solib-search-path (local debugging) or sysroot (cross-debugging)
 and a default main() breakpoint in .gdbinit
@@ -56,6 +57,7 @@ Now we launch gdb with our target executable. It doesn't load any shared librari
 We're ready to go.
 
 [gdb-sample]: https://sourceware.org/gdb/current/onlinedocs/gdb/Sample-Session.html
+[faye-williams]: http://www.fayewilliams.com/2011/02/01/command-line-gdb-tutorial-and-walkthrough-part-1/
 
 
 Starting Pyclewn
