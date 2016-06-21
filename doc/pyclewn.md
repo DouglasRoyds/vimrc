@@ -20,11 +20,11 @@ To upgrade, rerun, passing the `--upgrade` option to pip install.
 [installation]: http://pyclewn.sourceforge.net/install.html
 
 
-Check GDB
+Check gdb
 ---------
 
-Before getting tangled in Pyclewn, we can check that GDB is a flyer from the command line.
-If you're unfamiliar with GDB, work your way through the [sample gdb session][gdb-sample]
+Before getting tangled in Pyclewn, we can check that gdb is a flyer from the command line.
+If you're unfamiliar with gdb, work your way through the [Sample gdb session][gdb-sample] first.
 
 In the build directory, set a solib-search-path (local debugging) or sysroot (cross-debugging)
 and a default main() breakpoint in .gdbinit
@@ -32,12 +32,12 @@ and a default main() breakpoint in .gdbinit
     set solib-search-path ~/workspace/build/staging/x86/
     break main
 
-GDB will refuse to load this, unless you OK it in your ~/.gdbinit.
+gdb will refuse to load this, unless you OK it in your ~/.gdbinit.
 You can either OK the specific file, or a directory (and its subdirectories) containing the trusted .gdbinit file(s).
 
     set auto-load safe-path /home/douglas/workspace/project
 
-Now we launch GDB with our target executable. It doesn't load any shared libraries until we have run it.
+Now we launch gdb with our target executable. It doesn't load any shared libraries until we run it.
 
     $ gdb ./test_thing
     (gdb) r
@@ -65,7 +65,7 @@ Launch gdb with the target executable.
 
     :Pyclewn gdb ./test_thing
 
-We're away. Pyclewn has most GDB commands mapped to `:Ccommand`, or you can run them with `:C command`.
+We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
     :Crun
     :C run
