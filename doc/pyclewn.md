@@ -14,6 +14,8 @@ I am using a standard Pyclewn installation, following the default [Pyclewn insta
     $ vim -S pyclewn-2.3.vmb
     :q
 
+To upgrade, rerun, passing the `--upgrade` option to pip install.
+
 [frontend]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
 [installation]: http://pyclewn.sourceforge.net/install.html
 
