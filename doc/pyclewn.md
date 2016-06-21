@@ -28,15 +28,12 @@ Set a solib-search-path (local debugging) or sysroot (cross-debugging) and a def
     set solib-search-path ~/workspace/build/staging/x86/
     break main
 
-For local debugging, we launch gdb with the target executable.
+Launch gdb with the target executable.
 
     :Pyclewn gdb ./test_thing
 
-For remote debugging, just launch gdb, then connect to the remote server.
-
-    :Pyclewn gdb
-    :Ctarget remote 172.16.111.222:10000
-
-In either case, we're away.
+We're away. Pyclewn has most GDB commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
     :Crun
+    :C run
+
