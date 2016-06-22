@@ -315,11 +315,10 @@ inoremap <C-^> <Esc><C-^>
 " By leaving winheight at the default 1, I can optionally move with C-W j/k, leaving windows at their current heights.
 " Turning off equalalways prevents my carefully chosen window heights being wrecked when I close one window.
 " Equalise them manually using C-W =
-" I prefer new vertical splits to appear on the right
 set winheight=1
 set noequalalways
 set scrolloff=2
-set splitright
+set splitright             " I prefer new vertical splits to appear on the right
 
 " Ctrl-Tab to rotate between open buffers within the current window
 nmap <C-Tab> :bn<CR>
