@@ -318,7 +318,6 @@ inoremap <C-^> <Esc><C-^>
 " I prefer new vertical splits to appear on the right
 set winheight=1
 set noequalalways
-set browsedir=buffer
 set scrolloff=2
 set splitright
 
