@@ -6,6 +6,9 @@ doc/*.txt
 doc/tags
 douglas.add
 douglas.add.spl
+macros/
+plugin/pyclewn.vim
+syntax/clewn_variables.vim
 syntax/info.vim
 syntax/man.vim
 syntax/mangl.vim
