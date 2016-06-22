@@ -311,9 +311,12 @@ nmap <Leader>ws :w<CR>:source %<CR>
 set autowrite
 inoremap <C-^> <Esc><C-^>
 
-" I want new windows as big as possible, as I'll flick between them with <Leader>j and k
+" Normally, I move up and down between windows with the leader mappings below, which also maximise the height.
+" By leaving winheight at the default 1, I can optionally move with C-W j/k, leaving windows at their current heights.
+" Turning off equalalways prevents my carefully chosen window heights being wrecked when I close one window.
+" Equalise them manually using C-W =
 " I prefer new vertical splits to appear on the right
-set winheight=999
+set winheight=1
 set noequalalways
 set browsedir=buffer
 set scrolloff=2
