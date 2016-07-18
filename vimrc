@@ -181,7 +181,8 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 " Grep
 " Using ack2 in place of grep.
 " See https://github.com/petdance/ack2
-" Parameters can be quoted on the Ex command line, eg. :grep "this and that" %
+" Parameters can be single-quoted on the Ex command line, eg. :grep 'this and that' %
+" The regex alternate operator, '|', needs to be escaped to prevent Vim interpreting it as the command separator
 set grepprg=ack\ -H
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
