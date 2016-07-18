@@ -206,6 +206,8 @@ nmap <C-S-F4> :bd!<CR>
 nmap <F6> :setl wrap!<bar>:set wrap?<CR>
 imap <F6> <C-O><F6>
 
+nnoremap <F9> :Dispatch<CR>
+
 " Toggle spell-check
 nmap <F12> :set spell!<CR>
 imap <F12> <C-O><F12>
