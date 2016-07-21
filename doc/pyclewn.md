@@ -4,10 +4,10 @@ Working with Pyclewn
 Installation
 ------------
 
-Although there are instructions online for [installing Pyclewn with Pathogen or Vundle][frontend],
+Although there are instructions online for [installing Pyclewn with Pathogen or Vundle][1],
 they don't cover the Python part, meaning that you have to download the tarball and install it yourself.
 This doesn't make sense to me, as the Python code and vim scripts need to be in sync anyway.
-I am using a standard Pyclewn installation, following the default [Pyclewn installation notes][installation].
+I am using a standard Pyclewn installation, following the default [Pyclewn installation notes][2].
 
     $ sudo pip install pyclewn
     $ python -c "import clewn; clewn.get_vimball()"
@@ -16,16 +16,16 @@ I am using a standard Pyclewn installation, following the default [Pyclewn insta
 
 To upgrade, rerun, passing the `--upgrade` option to pip install.
 
-[frontend]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
-[installation]: http://pyclewn.sourceforge.net/install.html
+[1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
+[2]: http://pyclewn.sourceforge.net/install.html
 
 
 Check gdb
 ---------
 
 Before getting tangled in Pyclewn, we can check that gdb is a flyer from the command line.
-If you're unfamiliar with gdb, work your way through the [Sample gdb session][gdb-sample] first,
-or through [Faye Williams's excellent tutorial][faye-williams].
+If you're unfamiliar with gdb, work your way through the [Sample gdb session][3] first,
+or through [Faye Williams's excellent tutorial][4].
 
 In the build directory, set a solib-search-path (local debugging) or sysroot (cross-debugging)
 and a default main() breakpoint in .gdbinit
@@ -56,8 +56,8 @@ Now we launch gdb with our target executable. It doesn't load any shared librari
 
 We're ready to go.
 
-[gdb-sample]: https://sourceware.org/gdb/current/onlinedocs/gdb/Sample-Session.html
-[faye-williams]: http://www.fayewilliams.com/2011/02/01/command-line-gdb-tutorial-and-walkthrough-part-1/
+[3]: https://sourceware.org/gdb/current/onlinedocs/gdb/Sample-Session.html
+[4]: http://www.fayewilliams.com/2011/02/01/command-line-gdb-tutorial-and-walkthrough-part-1/
 
 
 Starting Pyclewn
