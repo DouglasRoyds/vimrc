@@ -87,14 +87,14 @@ A subset of the default mappings:
 
     :help gdb-keys
 
-        B       info breakpoints
-        L       info locals
         R       run
         C       continue
         S       step
         CTRL-N  next
-        CTRL-B  set a breakpoint on the line where the cursor is located
-        CTRL-K  clear all breakpoints on the line where the cursor is located
+        B       info breakpoints
+        L       info locals
+        CTRL-B  set a breakpoint on the cursor line
+        CTRL-K  clear all breakpoints on the cursor line
 
 
 Exiting
