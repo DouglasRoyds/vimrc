@@ -37,10 +37,11 @@ You can either OK the specific file, or a directory (and its subdirectories) con
 
 Now we launch gdb with our target executable. It doesn't load any shared libraries until we run it.
 
-    $ gdb ./test_thing
-    (gdb) r arg1 arg2
+    $ gdb ./progname                      # or ...
+    $ gdb --args ./progname arg1 arg2
+    (gdb) r
     ...
-    Breakpoint 1, main (argc=3, argv=0x7fffffffe0d8) at /home/douglas/workspace/project/test_thing.cpp:39
+    Breakpoint 1, main (argc=3, argv=0x7fffffffe0d8) at /home/douglas/workspace/project/progname.cpp:39
     39      {
 
     (gdb) info sharedlibrary
@@ -59,7 +60,7 @@ Starting Pyclewn
 
 Launch gdb with the target executable.
 
-    :Pyclewn gdb ./test_thing
+    :Pyclewn gdb --args ./progname arg1 arg2
 
 We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
