@@ -74,6 +74,12 @@ All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
 
 Also, I find that I am unable to restart Pyclewn within the same Vim session.
 
+Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
+
+    :let g:pyclewn_terminal = "xterm, -e"           # or ...
+    :let g:pyclewn_terminal = "xfce4-terminal, -x"  # then ...
+    :Pyclewn gdb ./progname
+
 
 [1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
 [2]: http://pyclewn.sourceforge.net/install.html
