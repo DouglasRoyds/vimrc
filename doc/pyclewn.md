@@ -16,9 +16,6 @@ I am using a standard Pyclewn installation, following the default [Pyclewn insta
 
 To upgrade, rerun, passing the `--upgrade` option to pip install.
 
-[1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
-[2]: http://pyclewn.sourceforge.net/install.html
-
 
 Check gdb
 ---------
@@ -56,9 +53,6 @@ Now we launch gdb with our target executable. It doesn't load any shared librari
 
 We're ready to go.
 
-[3]: https://sourceware.org/gdb/current/onlinedocs/gdb/Sample-Session.html
-[4]: http://www.fayewilliams.com/2011/02/01/command-line-gdb-tutorial-and-walkthrough-part-1/
-
 
 Starting Pyclewn
 ----------------
@@ -71,4 +65,10 @@ We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run 
 
     :Crun
     :C run
+
+
+[1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
+[2]: http://pyclewn.sourceforge.net/install.html
+[3]: https://sourceware.org/gdb/current/onlinedocs/gdb/Sample-Session.html
+[4]: http://www.fayewilliams.com/2011/02/01/command-line-gdb-tutorial-and-walkthrough-part-1/
 
