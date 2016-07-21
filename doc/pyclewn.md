@@ -68,11 +68,11 @@ We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run 
     :Crun
     :C run
 
-Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
-
-    :let g:pyclewn_terminal = "xterm, -e"           # or ...
-    :let g:pyclewn_terminal = "xfce4-terminal, -x"  # then ...
-    :Pyclewn gdb ./progname
+> Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
+>
+>     :let g:pyclewn_terminal = "xterm, -e"           # or ...
+>     :let g:pyclewn_terminal = "xfce4-terminal, -x"  # then ...
+>     :Pyclewn gdb ./progname
 
 
 Debugging
