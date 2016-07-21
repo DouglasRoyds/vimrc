@@ -67,9 +67,12 @@ We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run 
     :Crun
     :C run
 
-All done.
+All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
 
     :Cexitclewn
+    :Cunmapkeys
+
+Also, I find that I am unable to restart Pyclewn within the same Vim session.
 
 
 [1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
