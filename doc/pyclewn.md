@@ -60,6 +60,7 @@ Starting Pyclewn
 
 Launch gdb with the target executable.
 
+    :Pyclewn gdb ./progname                     # or ...
     :Pyclewn gdb --args ./progname arg1 arg2
 
 We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
