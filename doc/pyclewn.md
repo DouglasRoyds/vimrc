@@ -75,6 +75,28 @@ Optionally, run Pyclewn (the Python app) itself in a debug console, to see its d
     :Pyclewn gdb ./progname
 
 
+Debugging
+---------
+
+Turn on Pyclewn's debug-centric keyboard mappings (and turn them off again).
+
+    :Cmapkeys
+    :Cunmapkeys
+
+A subset of the default mappings:
+
+    :help gdb-keys
+
+        B       info breakpoints
+        L       info locals
+        R       run
+        C       continue
+        S       step
+        CTRL-N  next
+        CTRL-B  set a breakpoint on the line where the cursor is located
+        CTRL-K  clear all breakpoints on the line where the cursor is located
+
+
 Exiting
 -------
 
