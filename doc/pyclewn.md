@@ -68,16 +68,20 @@ We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run 
     :Crun
     :C run
 
-All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
-
-    :Cexitclewn
-    :Cunmapkeys
-
 Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
 
     :let g:pyclewn_terminal = "xterm, -e"           # or ...
     :let g:pyclewn_terminal = "xfce4-terminal, -x"  # then ...
     :Pyclewn gdb ./progname
+
+
+Exiting
+-------
+
+All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
+
+    :Cexitclewn
+    :Cunmapkeys
 
 
 Problems
