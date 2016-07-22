@@ -20,8 +20,8 @@ Moving around
 
 ### Vertically
 
-Type | Scroll the cursor to the
----- | ------------------------
+Type | To scroll the cursor to the
+---- | ---------------------------
  zt  | Top
  zz  | Middle
  zb  | Bottom of the screen.
@@ -35,113 +35,61 @@ Back | Forward | To the start of the
 
 ### Horizontally
 
-Ctrl-H/L::
-Move the cursor half a screen left/right (this is my own mapping)
+Left   | Middle | Right  |
+------ | ------ | ------ | ------------------------------------------------------------------------------------
+Ctrl-H |        | Ctrl-L | Move the cursor half a screen left/right (this is my own mapping)
+g^     | gM     | g$     | Move the cursor to the left, middle (my own mapping), or right side of the screen
+zs     | zZ     | ze     | Scroll the cursor to the left, middle (my own mapping), or right edge of the screen.
+zh     |        | zl     | Scroll horizontally, revealing one more character on the left or right
+zH     |        | zL     | Reveal half a screen horizontally on the left or right
 
-g^, gM, g$::
-Move the cursor to the left, middle (my own mapping), or right side of the screen
-
-zs, zZ, ze::
-Scroll the cursor to the left, middle (my own mapping), or right edge of the screen.
-
-zh, zl::
-Scroll horizontally, revealing one more character on the left or right (sort of like ctrl-e, ctrl-y, but horizontal)
-
-zH, zL::
-Reveal half a screen horizontally on the left or right
 
 Selecting
 ---------
 
-viw::
-The current word, without trailing white space (visual "inner" word)
+Type    | To select
+------- | ------------------------------------------------------------------------------
+viw     | The current word, without trailing white space (visual "inner" word)
+vap     | The current paragraph, including any trailing blank lines (visual a paragraph)
+vaB va{ | The current {} block, including the curly brackets (visual a Block)
+va[     | The current [] block, including the brackets
+va(     | The current () block, including the parentheses
+gv      | Get back the previous selection
+o       | Move cursor to opposite end of visual selection, so that you can move that end instead
+O       | Move cursor to the other corner on the same line (block-visual mode)
 
-vap::
-The current paragraph, including any trailing blank lines (visual a paragraph)
-
-vaB or va{::
-The current {} block, including the curly brackets (visual a Block)
-
-va[::
-The current [] block, including the brackets
-
-va(::
-The current () block, including the parentheses
-
-gv::
-Get back the previous selection
-
-o (Visual mode)::
-Move cursor to opposite end of visual selection, so that you can move that end instead
-
-O (Block-visual mode)::
-Move cursor to the other corner on the same line
 
 Editing
 -------
 
 ### Cut and paste
 
-yiw::
-Yank the current word
-
-"ayy::
-Yank the current line into register a
-
-"Ayy::
-Append the current line to register a
-
-gP::
-Put the register contents, and leave the cursor after the result
-
-]P or ]p::
-Put the register contents before/after, with the correct indentation
-
-"+yy::
-Yank the current line into the Windows/Gnome cut-and-paste buffer
-
-"*p::
-Put the contents of the X selection, ie. any text currently highlighted (by the mouse). A bit like a centre-click.
-
-daw::
-Delete (cut) a whole word, including spaces
-
-dB::
-Delete to the Beginning of the previous space-separated word. This is very handy for deleting word-by-word backwards
-from the end of a line, in combination with the . repeat command
+Type     | To
+-------- | --------------------------------------------------------------------
+yiw      | Yank the current word
+"ayy     | Yank the current line into register a
+"Ayy     | Append the current line to register a
+gP       | Put the register contents, and leave the cursor after the result
+]P or ]p | Put the register contents before/after, with the correct indentation
+"+yy     | Yank the current line into the Windows/Gnome cut-and-paste buffer
+"\*p     | Put the contents of the X selection, ie. any text currently highlighted (by the mouse). A bit like a centre-click.
+daw      | Delete (cut) a whole word, including spaces
+dB       | Delete to the Beginning of the previous space-separated word. This is very handy for deleting word-by-word backwards
 
 
 ### Registers
 
-`:reg`::
-Which register holds what?
-
-`:reg asdf`::
-Just show me these registers
-
-Unnamed ""::
-Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
-
-"0::
-The yank register: the most recent yank remains here (unless it was put in some other named register),
-so we can repeatedly change words for whatever we've most recently yanked:
-
-   yiw
-            (Move to some other word)
-   cw^R0
-            (Move to another word)
-   cw^R0    (... or just use the . command to repeat)
-
-"1 ... "9::
-The most recent whole-line delete or change (unless put elsewhere) goes into register 1.
-Successive changes or deletions push down the registers, from 1 to 9.
-
-"-::
-The small-delete register - deletions or changes of less than one line (unless put elsewhere)
-
-"_::
-The black hole register (that's an underscore).
-Delete or change into this one to avoid losing the unnamed register or pushing down register 1.
+Type        | To
+----------- | --------------------------------------------------------------------
+`:reg`      | Which register holds what?
+`:reg asdf` | Just show me these registers
+""          | The unnamed register: Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
+"0          | The yank register: the most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
+yiw         |
+cw^R0       | Use the . command to repeat
+"1 ... "9   | The most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
+"-          | The small-delete register - deletions or changes of less than one line (unless put elsewhere)
+"\_         | The black hole register (that's an underscore). Delete or change into this one to avoid losing the unnamed register or pushing down register 1.
 
 
 ### Capitalisation
