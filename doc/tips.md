@@ -79,17 +79,17 @@ dB       | Delete to the Beginning of the previous space-separated word. This is
 
 ### Registers
 
-Type        |                       | ...
------------ | ---------             | --------------------------------------------------------------------
-`:reg`      |                       | Which register holds what?
-`:reg asdf` |                       | Just show me these registers
-""          | Unnamed register      | Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
-"0          | Yank register         | The most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
-`    yiw`   |                       | Yank into "0
-`    cw^R0` |                       | Change a word to what's in "0
-"1 ... "9   |                       | Most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
-"-          | Small-delete register | Deletions or changes of less than one line (unless put elsewhere)
-"\_         | Black hole register   | Delete or change into this one to avoid losing the unnamed register or pushing down register 1 (that's an underscore)
+Type        |   Register    | ...
+----------- | ------------- | --------------------------------------------------------------------
+`:reg`      |               | Which register holds what?
+`:reg asdf` |               | Just show me these registers
+""          | Unnamed       | Every yank, delete, change, etc, even if it is also going into some other register
+"0          | Yank          | The most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
+`yiw`       |               | Yank into "0
+`cw^R0`     |               | Change a word to what's in "0
+"1 ... "9   |               | Most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
+"-          | Small-delete  | Deletions or changes of less than one line (unless put elsewhere)
+"\_         | Black hole    | Delete or change into this one to avoid losing the unnamed register or pushing down register 1 (that's an underscore)
 
 
 ### Capitalisation
@@ -107,7 +107,7 @@ Type        | ...
 ----------- | --------------------------------------------------------------------
 setl tw=80  | Set the text width (right margin) for the local buffer only
 gqap        | Reformat a paragraph
-gqj         | Reformat only the current line - this is safer than gqap, and you can rattle down through text by using the . command to repeat
+gqj         | Reformat only the current line. This is safer than gqap, and you can rattle down through text by using the `.` command to repeat
 
 
 ### Surround
@@ -133,9 +133,9 @@ Searching
 Type                    | ...
 ----------------------- | --------------------------------------------------------------------
 `*`                     | To find the next instance of the whole word the cursor is on, simply press `*`. To find the previous instance, press #. To find partial matches as well, use `g*` and `g#`
-/\\<whole_word_only\\>  | To search for whole words only, use the \< and \> keywords in the search string (though I almost never do this, as the magic * is so much easier)
-\^R^W                   | Pulls the current cursor word onto the command line, useful right after typing / or :grep
-\^R^A                   | Current cursor Word
+/\\\<whole_word_only\\\>    | To search for whole words only, use the \\\< and \\\> keywords in the search string (though I almost never do this, as the magic * is so much easier)
+^R^W                   | Pulls the current cursor word onto the command line, useful right after typing / or :grep
+^R^A                   | Current cursor whole Word
 \[I                     | Lists all occurrences of the cursor keyword in the current file and its #included files
 21\[^I                  | Jumps to an instance from within that list (e.g. number 21)
 `:g/pattern/nu`                    | Displays each line that contains the pattern, with a line number - very similar to the effect of \[I (this is the :number command)
