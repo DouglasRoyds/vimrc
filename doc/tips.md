@@ -176,8 +176,7 @@ gqj::
 Reformat only the current line - this is safer than gqap, and you can rattle down through text by using
           the . command to repeat
 
-Surround
-~~~~~~~~
+### Surround
 
 Install Tim Pope's https://github.com/tpope/vim-surround[vim-surround] plug-in.
 
