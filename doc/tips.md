@@ -182,18 +182,6 @@ When the target is a regular expression, it can be very difficult to get it righ
 3. Type Ctrl-R / to drop in the contents of the last / search
 
 
-### ctags
-
-This needs more work - I haven't actually been using ctags.
-Download Exuberant ctags from the [ctags home page][3], and extract ctags.exe into somewhere on your path.
-
-Type                        | ...
---------------------------- | --------------------------------------------------------------------
-Ctrl-]                      | Jumps directly to the declaration of the identifier under the cursor
-set tags=tags;/             | Searches for the tags file in the current working directory, then recursively up through the directory structure:
-command! Ctags !ctags --file-scope=no -R .      | Sets up the command :Ctags, which will rebuild the tags file from the current working directory down. I always work with the root of the check-out as the current working directory, so this rebuilds the root tags file.
-`autocmd BufWritePost *.[ch] :silent !ctags %`  | Reruns ctags on the current file when we save it. This updates the tags file in the file's own directory.
-
 ### Grep
 
     :grep regexpr --include="*.{c,h,sm}"
@@ -207,10 +195,10 @@ Hmm. More to come here.
 ### Tag list for the current file
 
 To display functions, structures, variables, etc. in the current file in a window down the side of the screen, download
-and install [taglist.vim][4]. Once installed, turn it on and off by
+and install [taglist.vim][3]. Once installed, turn it on and off by
 typing:
 
-   :Tlist
+    :Tlist
 
 I have mapped this to ,tl in my vimrc file.
 
@@ -398,7 +386,7 @@ In no particular order...
     so that I only ever have one instance of VIM open.
 14. Title case
 
+
 [1]: http://vim.wikia.com/wiki/Best_Vim_Tips
 [2]: https://github.com/tpope/vim-surround
-[3]: http://ctags.sourceforge.net/
-[4]: http://www.vim.org/scripts/script.php?script_id=273
+[3]: http://www.vim.org/scripts/script.php?script_id=273
