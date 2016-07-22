@@ -130,18 +130,18 @@ Searching
 
 ### Within the file
 
-Type                    | ...
------------------------ | --------------------------------------------------------------------
-`*`                     | To find the next instance of the whole word the cursor is on, simply press `*`. To find the previous instance, press #. To find partial matches as well, use `g*` and `g#`
+Type                        | ...
+--------------------------- | --------------------------------------------------------------------
+`*`                         | To find the next instance of the whole word the cursor is on, simply press `*`. To find the previous instance, press #. To find partial matches as well, use `g*` and `g#`
 /\\\<whole_word_only\\\>    | To search for whole words only, use the \\\< and \\\> keywords in the search string (though I almost never do this, as the magic * is so much easier)
-^R^W                   | Pulls the current cursor word onto the command line, useful right after typing / or :grep
-^R^A                   | Current cursor whole Word
-\[I                     | Lists all occurrences of the cursor keyword in the current file and its #included files
-21\[^I                  | Jumps to an instance from within that list (e.g. number 21)
-`:g/pattern/nu`                    | Displays each line that contains the pattern, with a line number - very similar to the effect of \[I (this is the :number command)
-`:g/pattern/z#.5 \| echo "-----"`  | Also a few lines of context (this is the :z# command)
-`:g/pattern/normal xxxx`           | Carries out Normal mode commands xxxx on each line that contains pattern (:normal)
-`:g/pattern/s#this#that#`          | Substitute that for this on each line matching the pattern
+^R^W                        | Pulls the current cursor word onto the command line, useful right after typing / or :grep
+^R^A                        | Current cursor whole Word
+\[I                         | Lists all occurrences of the cursor keyword in the current file and its #included files
+21\[^I                      | Jumps to an instance from within that list (e.g. number 21)
+`:g/pattern/nu`             | Displays each line that contains the pattern, with a line number - very similar to the effect of \[I (this is the :number command)
+`:g/pattern/z#.5`           | Also a few lines of context (this is the :z# command)
+`:g/pattern/normal xxxx`    | Carries out Normal mode commands xxxx on each line that contains pattern (:normal)
+`:g/pattern/s#this#that#`   | Substitute that for this on each line matching the pattern
 
 
 ### Search and replace
@@ -167,28 +167,19 @@ To search in a selection:
 
 ### Global search and replace within the file
 
-   :%s#this#that#gc
+Type             | Where | ...
+---------------- | ----- | ------------------
+:%s#this#that#gc |       | Search and replace
+                 | %     | Whole file
+                 | g     | Global replacements within each line
+                 | c     | Confirm each change
+:%s#pattern##gn  |       | Count. Does a search and replace, but doesn't actually do it, only reporting how many matches it found.
 
-where
+When the target is a regular expression, it can be very difficult to get it right, so:
 
-%::
-Whole file
-
-g::
-Global replacements within each line
-
-c::
-Confirm each change
-
-:%s#pattern##gn::
-Count. Does a search and replace, but doesn't actually do it, only reporting how many matches it found.
-
-Some tricks with :s
-
- * When the target is a regular expression, it can be very difficult to get it right, so:
-    1. Get the search right first, using a normal / search, with all the regular expression tricks you need.
-    2. Start the command with :%s#
-    3. Type Ctrl-R / to drop in the contents of the last / search
+1. Get the search right first, using a normal / search, with all the regular expression tricks you need.
+2. Start the command with :%s#
+3. Type Ctrl-R / to drop in the contents of the last / search
 
 
 ### ctags
