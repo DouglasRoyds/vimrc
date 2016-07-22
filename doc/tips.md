@@ -79,17 +79,17 @@ dB       | Delete to the Beginning of the previous space-separated word. This is
 
 ### Registers
 
-Type        | ...
------------ | --------------------------------------------------------------------
-`:reg`      | Which register holds what?
-`:reg asdf` | Just show me these registers
-""          | The unnamed register: Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
-"0          | The yank register: the most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
-            |     yiw
-            |     cw^R0
-"1 ... "9   | The most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
-"-          | The small-delete register - deletions or changes of less than one line (unless put elsewhere)
-"\_         | The black hole register (that's an underscore). Delete or change into this one to avoid losing the unnamed register or pushing down register 1.
+Type        |                       | ...
+----------- | ---------             | --------------------------------------------------------------------
+`:reg`      |                       | Which register holds what?
+`:reg asdf` |                       | Just show me these registers
+""          | Unnamed register      | Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
+"0          | Yank register         | The most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
+`    yiw`   |                       | Yank into "0
+`    cw^R0` |                       | Change a word to what's in "0
+"1 ... "9   |                       | Most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
+"-          | Small-delete register | Deletions or changes of less than one line (unless put elsewhere)
+"\_         | Black hole register   | Delete or change into this one to avoid losing the unnamed register or pushing down register 1 (that's an underscore)
 
 
 ### Capitalisation
@@ -97,8 +97,8 @@ Type        | ...
 Type        | ...
 ----------- | --------------------------------------------------------------------
 ~           | Switch the capitalisation of the current character or selection
-gUw         | Capitalise a word
-guw         | Change a word to lower case
+gUw         | Capitalise rest of the word
+guw         | Change rest of the word to lower case
 
 
 ### Reformatting paragraphs
