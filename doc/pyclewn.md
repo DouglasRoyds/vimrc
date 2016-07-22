@@ -74,7 +74,7 @@ Before starting the program, we almost certainly need to provide it with a tty c
 Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
     :Cinferiortty
-    :Crun
+    :Crun                       # or ...
     :C run
 
 Assuming we have the "break main" line in our .gdbinit script,
