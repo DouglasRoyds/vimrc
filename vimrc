@@ -404,6 +404,9 @@ nmap <Leader>tl :Tlist<CR><C-W>h
 
 "-------------------------------------- Exuberant ctags --------------------------------------------------------------
 
+" This needs more work - I haven't actually been using ctags.
+"     http://ctags.sourceforge.net/
+
 " Run ctags on the cwd (default) or the provided directory
 "  -R          Recursive
 "  --totals    Nice little summary to give me some eye-candy
