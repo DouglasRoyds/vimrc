@@ -70,8 +70,10 @@ You can also launch Pyclewn from the command line, and it will open up a new Vim
     $ python -m clewn -a '--args ./progname arg1 arg2'
 
 The Python clewn application is started in the background, but gdb doesn't do anything until we issue a command.
+Before starting the program, we almost certainly need to provide it with a tty console for stdout.
 Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
+    :Cinferiortty
     :Crun
     :C run
 
@@ -130,7 +132,11 @@ All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
 Problems
 --------
 
- - I am unable to restart Pyclewn within the same Vim session.
+I am unable to:
+
+ - Restart Pyclewn within the same Vim session.
+ - Set g:pyclewn_args="xfce4-terminal,-x" to launch xfce4-terminal, either from inside Vim or the command-line.
+   The default xterm -e does seem to work, so that's OK.
 
 
 [1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
