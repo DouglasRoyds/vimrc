@@ -367,12 +367,10 @@ nnoremap cof :set <C-R>=&winfixwidth ? 'nowinfixwidth' : 'winfixwidth'<CR><CR>
 "map <Leader>< :s/^\(.*\)$/<!-- \1 -->/<CR>                              " HTML block comment
 "map <Leader>d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>    " Remove block comments
 
-"-------------------------------------- Edit specific files -----------------------------------------------------------
+"-------------------------------------- Custom commands ---------------------------------------------------------------
 
 command! Vimrc execute 'split '.$MYVIMRC
-command! Tips  split ~/Documents/Technology/Open\ source\ software/Applications\ and\ projects/Editors/Text/VIM/tips.txt
-
-"-------------------------------------- Custom commands ---------------------------------------------------------------
+"command! Tips  split ~/.vim/doc/tips.md
 
 " I frequently still have my finger on the shift key when I try to type the w of a :w command
 command! W w
