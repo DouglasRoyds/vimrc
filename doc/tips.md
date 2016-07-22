@@ -20,17 +20,17 @@ Moving around
 
 ### Vertically
 
-   | Scroll the cursor to the
--- | ------------------------
-zt | Top
-zz | Middle
-zb | Bottom of the screen.
+Type | Scroll the cursor to the
+---- | ------------------------
+ zt  | Top
+ zz  | Middle
+ zb  | Bottom of the screen.
 
-      | Back/forward to the start of this/the next
------ | ------------------------
-[[ ]] | Function (marked by a { in the first column).
-{ }   | Paragraph.
-( )   | Sentence.
+Back | Forward | To the start of the
+---- | ------- | ------------------------
+ [[  |   ]]    | Function (marked by a { in the first column).
+ {   |   }     | Paragraph.
+ (   |   )     | Sentence.
 
 
 ### Horizontally
