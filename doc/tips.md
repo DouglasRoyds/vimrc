@@ -64,7 +64,7 @@ Editing
 
 ### Cut and paste
 
-Type     |
+Type     | ...
 -------- | --------------------------------------------------------------------
 yiw      | Yank the current word
 "ayy     | Yank the current line into register a
@@ -79,7 +79,7 @@ dB       | Delete to the Beginning of the previous space-separated word. This is
 
 ### Registers
 
-Type        |
+Type        | ...
 ----------- | --------------------------------------------------------------------
 `:reg`      | Which register holds what?
 `:reg asdf` | Just show me these registers
