@@ -320,8 +320,8 @@ Type                    | ...
 %:p                     | Current file name complete with its full path
 %:h                     | Just the path to the current file
 :cd %:h                 | Changes the default directory to the current file's directory. I've mapped this as `,cd`
-%:r                     | Current file name without its extension. To edit the file that has the same name as the current file, but the extension .sm:
-%:r.sm                  |
+%:r                     | Current file name without its extension.
+%:r.sm                  | Edit the file that has the same name as the current file, but the extension .sm
 `:echo expand("%:r")`   | So exactly what do I get from a "%:r"?
 Ctrl-G                  | So what is the current file name (normal mode only)?
 1Ctrl-G                 | Fully-qualified
