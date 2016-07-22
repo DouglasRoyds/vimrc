@@ -266,11 +266,11 @@ Printing
 
 Set preferred margins in the vimrc file using the printoptions setting, eg:
 
-   set printoptions=left:10mm,top:10mm,right:10mm,bottom:10mm
+    set printoptions=left:10mm,top:10mm,right:10mm,bottom:10mm
 
 Print using File, Print, or by using the hardcopy command:
 
-   :ha
+    :ha
 
 Assuming that the printfont is 10 point Courier, then you can lay the pages out as follows:
 
