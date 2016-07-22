@@ -336,6 +336,10 @@ nmap <Leader>k <C-W>k<C-W>_
 nmap <Leader>h <C-W>h
 nmap <Leader>l <C-W>l
 
+nnoremap [of :set winfixwidth<CR>
+nnoremap ]of :set nowinfixwidth<CR>
+nnoremap cof :set <C-R>=&winfixwidth ? 'nowinfixwidth' : 'winfixwidth'<CR><CR>
+
 "-------------------------------------- Commenting/Uncommenting code --------------------------------------------------
 " Horrors! .vimrc is not the place for this.
 " I want one mapping for line comments, one for blocks.
