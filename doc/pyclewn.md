@@ -58,11 +58,16 @@ We're ready to go.
 Starting Pyclewn
 ----------------
 
-Launch gdb with the target executable.
+Launch Pyclewn and gdb from within Vim:
 
     :lcd dirname/                               # Don't forget to change to the appropriate directory first.
     :Pyclewn gdb ./progname                     # or ...
     :Pyclewn gdb --args ./progname arg1 arg2
+
+You can also launch Pyclewn from the command line, and it will open up a new Vim instance:
+
+    $ python -m clewn -a ./progname                     # or ...
+    $ python -m clewn -a '--args ./progname arg1 arg2'
 
 The Python clewn application is started in the background, but gdb doesn't do anything until we issue a command.
 Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
@@ -101,6 +106,9 @@ A subset of the default mappings:
         L       Info locals
         Ctrl-B  Set a breakpoint on the cursor line
         Ctrl-K  Clear all breakpoints on the cursor line
+
+Be careful while editing with these key-mappings turned on, eg.
+A (append), C (change), and X (delete backwards) won't have the expected effect.
 
 
 Exiting
