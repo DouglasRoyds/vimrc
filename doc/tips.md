@@ -220,64 +220,44 @@ I have mapped this to ,tl in my vimrc file.
 VIM is capable of searching through the files in your include path to find instances of the identifier
 currently under the cursor. The commands of interest are:
 
-[i::
-Display the first instance (which will normally be the declaring instance),
-
-[I::
-List all instances, both within include files and this file, and
-
-[^I::
-Jump straight to the first instance.
+Type | ...
+---- | --------------------------------------------------------------------
+[i   | Display the first instance (which will normally be the declaring instance),
+[I   | List all instances, both within include files and this file, and
+[^I  | Jump straight to the first instance.
 
 For these commands to work, you must have the "path" variable set correctly:
 
-   set path=.,,**5
+    set path=.,,**5
 
 This sets the file search path as follows:
 
 1. The current file's directory (.)
 2. The current working directory (,, - the comma is actually the separator, but nothing inbetween them implies
    the current working directory)
-3. All directories below that (**), but to a maximum of 5 deep
+3. All directories below that (`**`), but to a maximum of 5 deep
 
 This assumes that you follow my working style of ensuring that the current working directory is always the root of the
 check-out.
+
 
 Folding
 -------
 
 First scratchings. Works OKish for Python, though it makes a breakfast of doc comments and doctest:
 
-   set foldmethod=indent
+    set foldmethod=indent
 
-zo::
-zc::
-Open and close individual folds
+Type            | ...
+--------------- | --------------------------------------------------------------------
+zo zc           | Open and close individual folds
+zO zC           | Open and close recursively under the cursor
+zm zr           | Fold more and fold reduce across the file, by one level
+zM zR           | Open and close (Maximise and Reductio ad absurdum) *all* folds
+zn zN zi        | Fold none, Normal, or invert (toggle) `foldenable`, to temporarily turn folding on and off
+[z ]z           | Start and end of the currently open fold
+zk zj           | Move to previous and next folds (up/down)
 
-zO::
-zC::
-Open and close recursively under the cursor
-
-zm::
-zr::
-Fold more and fold reduce across the file, by one level
-
-zM::
-zR::
-Open and close (Maximise and Reductio ad absurdum) *all* folds
-
-zn::
-zN::
-zi::
-Fold none, Normal, or invert (toggle) `foldenable`, to temporarily turn folding on and off
-
-[z::
-]z::
-Start and end of the currently open fold
-
-zk::
-zj::
-Move to previous and next folds (up/down)
 
 Tabs
 ----
@@ -285,17 +265,13 @@ Tabs
 Tab pages provide different sets of windows into the *same* buffers, similar to desktop workspaces.
 Use them when you need to do something without spoiling your current window pane layout.
 
-:tabnew;;
-New tab page, nothing in it.
+Type            | ...
+--------------- | --------------------------------------------------------------------
+:tabnew         | New tab page, nothing in it.
+:tab split      | View this buffer in a new tab page.
+:tabs           | List the tabs. Only shows open windows, not all the buffers (the buffers are common to all tab pages, remember).
+gt, gT          | Next, previous tab.
 
-:tab split;;
-View this buffer in a new tab page.
-
-:tabs;;
-List the tabs. Only shows open windows, not all the buffers (the buffers are common to all tab pages, remember).
-
-gt, gT;;
-Next, previous tab.
 
 Printing
 --------
@@ -310,23 +286,18 @@ Print using File, Print, or by using the hardcopy command:
 
 Assuming that the printfont is 10 point Courier, then you can lay the pages out as follows:
 
-Plain text on A4::
-Text up to 80 characters across will fit onto A4 portrait
-
-Plain text, 2-up on A4::
-Select A4 portrait, 2 pages per sheet
-
-Code on A4::
-Code up to about 130 characters across will fit onto A4 landscape
-
-Code, 2-up on A3::
-Select A3 portrait, 2 pages per sheet. This is my preferred format for printing code. Select duplex, "flip on long
-edge".
+Printing                | ...
+----------------------- | --------------------------------------------------------------------
+Plain text on A4        | Text up to 80 characters across will fit onto A4 portrait
+Plain text, 2-up on A4  | Select A4 portrait, 2 pages per sheet
+Code on A4              | Code up to about 130 characters across will fit onto A4 landscape
+Code, 2-up on A3        | Select A3 portrait, 2 pages per sheet. This is my preferred format for printing code. Select duplex, "flip on long edge".
 
 Under Windows, these settings can be changed from the print dialogue box, but under Linux, you need to change the
 printoptions. A4 portrait is the default:
 
-   :set popt+=portrait:n,paper:A3
+    :set popt+=portrait:n,paper:A3
+
 
 Ex command-line editing
 -----------------------
@@ -335,79 +306,53 @@ Ex command-line editing
 
 Paste text into the command line by using a Ctrl-R followed by:
 
-Ctrl-W::
-The word under the cursor
-
-Ctrl-A::
-The WORD under the cursor
-
-/::
-The last / search string
-
-"::
-The contents of the unnamed register, containing the text of the last delete or yank
-
-*::
-The clipboard
-
-%::
-The current file name
+Type        | ...
+----------- | --------------------------------------------------------------------
+Ctrl-W      | The word under the cursor
+Ctrl-A      | The WORD under the cursor
+/           | The last / search string
+"           | The contents of the unnamed register, containing the text of the last delete or yank
+`*`         | The clipboard
+%           | The current file name
 
 
 ### Current file name
 
 To pass the current file name into a shell command, use the % character:
 
-   :!attrib -r %
+    :!attrib -r %
 
 Of course, I've mapped this particular command to ,wr in my vimrc file.
 
 These ones are good, too:
 
-#3::
-Name of the file in buffer 3
-
-%:p::
-Current file name complete with its full path
-
-%:h::
-Just the path to the current file, eg. :cd %:h changes the default directory to the current file's directory. I don't
-know why, but % sometimes expands to the full path, and sometimes only to the filename without the path. In the latter
-case, you need to use %:p:h to get the path to the current file.
-
-%:r::
-Current file name without its extension. To edit the file that has the same name as the current file,
-but the extension .sm:
-
-   :e %:r.sm
-
-`:echo expand("%:r")`::
-So exactly what do I get from a "%:r"?
-
-Ctrl-G::
-So what is the current file name (normal mode only)?
-
-1Ctrl-G::
-Fully-qualified
+Type                    | ...
+----------------------- | --------------------------------------------------------------------
+#3                      | Name of the file in buffer 3
+%:p                     | Current file name complete with its full path
+%:h                     | Just the path to the current file, eg. :cd %:h changes the default directory to the current file's directory. I don't know why, but % sometimes expands to the full path, and sometimes only to the filename without the path. In the latter case, you need to use %:p:h to get the path to the current file.
+%:r                     | Current file name without its extension. To edit the file that has the same name as the current file, but the extension .sm:
+%:r.sm                  |
+`:echo expand("%:r")`   | So exactly what do I get from a "%:r"?
+Ctrl-G                  | So what is the current file name (normal mode only)?
+1Ctrl-G                 | Fully-qualified
 
 
 ### Argument list
 
-`:args *.c`;;
-Set the arglist to all the *.c files, and edit the first one
+Type                            | ...
+------------------------------- | --------------------------------------------------------------------
+`:args *.c`                     | Set the arglist to all the `*.c` files, and edit the first one
+`:args **/CMakeLists.txt`       | Set the arglist to all the CMakeLists.txt files in any subdirectory below the current one ...
+`:args ../**/CMakeLists.txt`    | ... or below the next directory up
 
-`:args **/CMakeLists.txt`;;
-Set the arglist to all the CMakeLists.txt files in any subdirectory below the current one ...
-
-`:args ../**/CMakeLists.txt`;;
-\... or below the next directory up
 
 Working with other applications
 -------------------------------
 
 ### SSH
 
-   :e scp://username@hostname//path/to/document
+    :e scp://username@hostname//path/to/document
 
 Don't know yet how to manage a password. Works best with keys.
 
@@ -416,7 +361,7 @@ Don't know yet how to manage a password. Works best with keys.
 
 To preview the current html file in a web-browser:
 
-   :!start firefox "%"
+    :!start firefox "%"
 
 Of course, I've mapped this to a key-stroke (,wb)
 
@@ -427,7 +372,8 @@ To open new files into the currently-open gvim instance by default, add the --re
 In Windows Explorer, the Tools, Options, File Types, Advanced, Open, Application used to perform action should be set
 to:
 
-   C:\Vim\vim62\gvim.exe --remote-silent "%1"
+    C:\Vim\vim62\gvim.exe --remote-silent "%1"
+
 
 Stuff I can't do yet
 --------------------
@@ -444,7 +390,7 @@ In no particular order...
    auto-indentation for HTML is a complete PITA at the moment.
 7. Use the arrow keys when doing a visual selection
 8. Use the h key to move from the start of this line to the end of the preceding line
-9. Use ,/* to comment the selected block in my preferred block-comment style.
+9. Use `,/*` to comment the selected block in my preferred block-comment style.
 10. Auto-enter HTML tags
 11. Auto-fold HTML/XML files
 12. Re-load a VIM script file without having to exit and restart VIM
