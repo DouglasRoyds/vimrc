@@ -318,7 +318,8 @@ Type                    | ...
 ----------------------- | --------------------------------------------------------------------
 #3                      | Name of the file in buffer 3
 %:p                     | Current file name complete with its full path
-%:h                     | Just the path to the current file, eg. :cd %:h changes the default directory to the current file's directory
+%:h                     | Just the path to the current file
+:cd %:h                 | Changes the default directory to the current file's directory. I've mapped this as `,cd`
 %:r                     | Current file name without its extension. To edit the file that has the same name as the current file, but the extension .sm:
 %:r.sm                  |
 `:echo expand("%:r")`   | So exactly what do I get from a "%:r"?
