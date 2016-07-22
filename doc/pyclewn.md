@@ -90,7 +90,7 @@ the program is launched, breaks on the `main()` method, and the source file is d
 Debugging
 ---------
 
-Issue commands to gdb by prefixing them with :C.
+Issue commands to gdb by prefixing them with `:C`.
 To see a list of all commands, and a list of all the possible arguments to a selected command:
 
     :C <Ctrl-D>
@@ -135,7 +135,7 @@ Problems
 I am unable to:
 
  - Restart Pyclewn within the same Vim session.
- - Set g:pyclewn_args="xfce4-terminal,-x" to launch xfce4-terminal, either from inside Vim or the command-line.
+ - Set g:pyclewn_args="--terminal='xfce4-terminal,-x'" to launch xfce4-terminal, either from inside Vim or the command-line.
    The default xterm -e does seem to work, so that's OK.
 
 
