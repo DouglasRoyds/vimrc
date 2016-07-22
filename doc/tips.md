@@ -20,14 +20,14 @@ Moving around
 
 ### Vertically
 
-Scroll the cursor to the
-
+   | Scroll the cursor to the
+-- | ------------------------
 zt | Top
 zz | Middle
 zb | Bottom of the screen.
 
-Back/forward to the start of this/the next
-
+      | Back/forward to the start of this/the next
+----- | ------------------------
 [[ ]] | Function (marked by a { in the first column).
 { }   | Paragraph.
 ( )   | Sentence.
