@@ -88,6 +88,13 @@ The program is launched, breaks on the `main()` method, and the source file is d
 Debugging
 ---------
 
+Issue commands to gdb by prefixing them with :C.
+To see a list of all commands, and a list of all the possible arguments to a selected command:
+
+    :C <Ctrl-D>
+    :Ccommand <Ctrl-D>
+    :C command <Ctrl-D>
+
 Turn on Pyclewn's debug-centric keyboard mappings (and turn them off again).
 
     :Cmapkeys
