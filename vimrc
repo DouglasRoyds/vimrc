@@ -323,6 +323,7 @@ set winheight=1
 set noequalalways
 set scrolloff=2
 set splitright             " I prefer new vertical splits to appear on the right
+set showtabline=0          " Never show the irritating tab line at the top of the console
 
 " Ctrl-Tab to rotate between open buffers within the current window
 nmap <C-Tab> :bn<CR>
@@ -334,9 +335,6 @@ nmap <Leader>j <C-W>j<C-W>_
 nmap <Leader>k <C-W>k<C-W>_
 nmap <Leader>h <C-W>h
 nmap <Leader>l <C-W>l
-
-" Never show the irritating tab line at the top of the console
-set showtabline=0
 
 "-------------------------------------- Commenting/Uncommenting code --------------------------------------------------
 " Horrors! .vimrc is not the place for this.
