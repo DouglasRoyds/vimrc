@@ -10,7 +10,7 @@ How to crack the (very steep) learning curve into VIM:
    else's. Do this as part of the install process, before even trying to start using VIM.
 2. Do the tutorial - launch it from the command line by typing vimtutor. This copies the original file, and
    opens VIM to edit it.
-3. Make sure you are familiar with all the commands in the http://vim.wikia.com/wiki/Best_Vim_Tips[Best Vim Tips]
+3. Make sure you are familiar with all the commands in the [Best Vim Tips][1]
 4. The rest of this document describes the things that won't be covered by the above. At time of writing, I'm
    not describing how to set up your configuration and plug-ins here - I'm just assuming that they're set up
    the same as mine. I need to think about how to standardise this.
@@ -176,7 +176,7 @@ Reformat only the current line - this is safer than gqap, and you can rattle dow
 
 ### Surround
 
-Install Tim Pope's https://github.com/tpope/vim-surround[vim-surround] plug-in.
+Install Tim Pope's [vim-surround][2] plug-in.
 
 Command        | Old text   | New text     | Comment
 -------------- | ---------- | ------------ | ----------------------------------------------------
@@ -277,7 +277,7 @@ Some tricks with :s
 ### ctags
 
 This needs more work - I haven't actually been using ctags. Download Exuberant ctags from the
-http://ctags.sourceforge.net/[ctags home page], and extract ctags.exe into somewhere on your path (I put it in c:\bin).
+[ctags home page][3], and extract ctags.exe into somewhere on your path (I put it in c:\bin).
 
 Ctrl-]::
 Jumps directly to the declaration of the identifier under the cursor
@@ -306,7 +306,7 @@ Hmm. More to come here.
 ### Tag list for the current file
 
 To display functions, structures, variables, etc. in the current file in a window down the side of the screen, download
-and install http://www.vim.org/scripts/script.php?script_id=273[taglist.vim]. Once installed, turn it on and off by
+and install [taglist.vim][4]. Once installed, turn it on and off by
 typing:
 
    :Tlist
@@ -551,3 +551,7 @@ In no particular order...
     so that I only ever have one instance of VIM open.
 14. Title case
 
+[1]: http://vim.wikia.com/wiki/Best_Vim_Tips
+[2]: https://github.com/tpope/vim-surround
+[3]: http://ctags.sourceforge.net/
+[4]: http://www.vim.org/scripts/script.php?script_id=273
