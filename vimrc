@@ -270,6 +270,12 @@ nnoremap coD :diffoff!<CR>
 inoremap :w<CR> <C-O>:w<CR>
 inoremap :wq<CR> <C-O>:wq<CR>
 
+"-------------------------------------- Pyclewn -----------------------------------------------------------------------
+
+nnoremap [op :Cmapkeys<CR>
+nnoremap ]op :Cunmapkeys<CR>
+nnoremap cop :<C-R>=strlen(mapcheck("R")) ? 'Cunmapkeys' : 'Cmapkeys' <CR><CR>
+
 "-------------------------------------- Leader mappings ---------------------------------------------------------------
 
 " The \ key is inconveniently located on my work keyboard
