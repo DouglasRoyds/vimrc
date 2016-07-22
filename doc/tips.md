@@ -85,8 +85,8 @@ Type        | ...
 `:reg asdf` | Just show me these registers
 ""          | The unnamed register: Every yank, delete, change, etc. goes into this one, even if it is also going into some other register
 "0          | The yank register: the most recent yank remains here (unless it was put in some other named register), so we can repeatedly change words for whatever we've most recently yanked:
-            | yiw
-            | cw^R0
+            |     yiw
+            |     cw^R0
 "1 ... "9   | The most recent whole-line delete or change (unless put elsewhere) goes into register 1. Successive changes or deletions push down the registers, from 1 to 9.
 "-          | The small-delete register - deletions or changes of less than one line (unless put elsewhere)
 "\_         | The black hole register (that's an underscore). Delete or change into this one to avoid losing the unnamed register or pushing down register 1.
@@ -94,27 +94,21 @@ Type        | ...
 
 ### Capitalisation
 
-~::
-Switch the capitalisation of the current character or selection
-
-gUw::
-Capitalise a word
-
-guw::
-Change a word to lower case
+Type        | ...
+----------- | --------------------------------------------------------------------
+~           | Switch the capitalisation of the current character or selection
+gUw         | Capitalise a word
+guw         | Change a word to lower case
 
 
 ### Reformatting paragraphs
 
-setl tw=80::
-Set the text width (right margin) for the local buffer only
+Type        | ...
+----------- | --------------------------------------------------------------------
+setl tw=80  | Set the text width (right margin) for the local buffer only
+gqap        | Reformat a paragraph
+gqj         | Reformat only the current line - this is safer than gqap, and you can rattle down through text by using the . command to repeat
 
-gqap::
-Reformat a paragraph
-
-gqj::
-Reformat only the current line - this is safer than gqap, and you can rattle down through text by using
-          the . command to repeat
 
 ### Surround
 
@@ -130,43 +124,24 @@ ysW)           | x>3        | (x>3)        | You surround (wait ...) Word with p
 yss<p>         | Line       | <p>Line</p>  | You surround whole line
 v<movement>S"  | Ginger     | "Ginger"     | visual Surround
 
+
 Searching
 ---------
 
 ### Within the file
 
-The magic `*`::
-To find the next instance of the whole word the cursor is on, simply press \*. To find the previous instance, press #. To
-find partial matches as well, use g* and g#.
-
-/\<whole_word_only\>::
-To search for whole words only, use the \< and \> keywords in the search string (though I almost never do this, as the
-magic * is so much easier)
-
-\^R^W::
-Pulls the current cursor word onto the command line, useful right after typing / or :grep
-
-\^R^A::
-Current cursor Word
-
-[I::
-Lists all occurrences of the cursor keyword in the current file and its #included files
-
-21[^I::
-Jumps to an instance from within that list (e.g. number 21)
-
-`:g/pattern/nu`::
-Displays each line that contains the pattern, with a line number - very similar to the effect of [I
-(this is the :number command)
-
-`:g/pattern/z#.5 | echo "-----"`::
-Also a few lines of context (this is the :z# command)
-
-`:g/pattern/normal xxxx`::
-Carries out Normal mode commands xxxx on each line that contains pattern (:normal)
-
-`:g/pattern/s#this#that#`::
-Substitute that for this on each line matching the pattern
+Type                    | ...
+----------------------- | --------------------------------------------------------------------
+`*`                     | To find the next instance of the whole word the cursor is on, simply press `*`. To find the previous instance, press #. To find partial matches as well, use `g*` and `g#`
+/\\<whole_word_only\\>  | To search for whole words only, use the \< and \> keywords in the search string (though I almost never do this, as the magic * is so much easier)
+\^R^W                   | Pulls the current cursor word onto the command line, useful right after typing / or :grep
+\^R^A                   | Current cursor Word
+\[I                     | Lists all occurrences of the cursor keyword in the current file and its #included files
+21\[^I                  | Jumps to an instance from within that list (e.g. number 21)
+`:g/pattern/nu`                    | Displays each line that contains the pattern, with a line number - very similar to the effect of \[I (this is the :number command)
+`:g/pattern/z#.5 \| echo "-----"`  | Also a few lines of context (this is the :z# command)
+`:g/pattern/normal xxxx`           | Carries out Normal mode commands xxxx on each line that contains pattern (:normal)
+`:g/pattern/s#this#that#`          | Substitute that for this on each line matching the pattern
 
 
 ### Search and replace
