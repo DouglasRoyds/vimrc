@@ -92,14 +92,15 @@ A subset of the default mappings:
 
     :help gdb-keys
 
-        R       run
-        C       continue
-        S       step
-        CTRL-N  next
-        B       info breakpoints
-        L       info locals
-        CTRL-B  set a breakpoint on the cursor line
-        CTRL-K  clear all breakpoints on the cursor line
+        R       Run             # Yes, that is Shift-R
+        C       Continue
+        S       Step into
+        Ctrl-N  Next
+        F       Finish (step out)
+        B       Info breakpoints
+        L       Info locals
+        Ctrl-B  Set a breakpoint on the cursor line
+        Ctrl-K  Clear all breakpoints on the cursor line
 
 
 Exiting
