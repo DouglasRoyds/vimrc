@@ -78,7 +78,7 @@ Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:
     :C run
 
 Assuming we have the "break main" line in our .gdbinit script,
-The program is launched, breaks on the `main()` method, and the source file is displayed with breakpoint #1 showing.
+the program is launched, breaks on the `main()` method, and the source file is displayed with breakpoint #1 showing.
 
 > Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
 >
