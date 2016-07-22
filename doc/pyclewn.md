@@ -115,6 +115,8 @@ A subset of the default mappings:
         L       Info locals
         Ctrl-B  Set a breakpoint on the cursor line
         Ctrl-K  Clear all breakpoints on the cursor line
+        Ctrl-U  Up one stack frame
+        Ctrl-D  Down one stack frame
 
 Be careful while editing with these key-mappings turned on, eg.
 A (append), C (change), and X (delete backwards) won't have the expected effect.
