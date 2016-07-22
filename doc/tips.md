@@ -181,17 +181,15 @@ Surround
 
 Install Tim Pope's https://github.com/tpope/vim-surround[vim-surround] plug-in.
 
-[options="header"]
-|==================================================================================================
-| Command        | Old text   | New text     | Comment
-| ds"            | "Fred"     | Fred         | Delete surrounding quotes
-| cs])           | [123]      | (123)        | Use the right-bracket form for no intervening spaces
-| cs"<p>         | "Text"     | <p>Text</p>  |
-| cit            | <p>Old</p> | <p>New</p>   | Change inner tag
-| ysW)           | x>3        | (x>3)        | You surround (wait ...) Word with parentheses
-| yss<p>         | Line       | <p>Line</p>  | You surround whole line
-| v<movement>S"  | Ginger     | "Ginger"     | visual Surround
-|==================================================================================================
+Command        | Old text   | New text     | Comment
+-------------- | ---------- | ------------ | ----------------------------------------------------
+ds"            | "Fred"     | Fred         | Delete surrounding quotes
+cs])           | [123]      | (123)        | Use the right-bracket form for no intervening spaces
+cs"<p>         | "Text"     | <p>Text</p>  |
+cit            | <p>Old</p> | <p>New</p>   | Change inner tag
+ysW)           | x>3        | (x>3)        | You surround (wait ...) Word with parentheses
+yss<p>         | Line       | <p>Line</p>  | You surround whole line
+v<movement>S"  | Ginger     | "Ginger"     | visual Surround
 
 Searching
 ---------
@@ -387,8 +385,7 @@ Move to previous and next folds (up/down)
 Tabs
 ----
 
-Tab pages provide different sets of windows into the *same* buffers.
-They are not separate workspaces.
+Tab pages provide different sets of windows into the *same* buffers, similar to desktop workspaces.
 Use them when you need to do something without spoiling your current window pane layout.
 
 :tabnew;;
