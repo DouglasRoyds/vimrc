@@ -274,7 +274,7 @@ Print using File, Print, or by using the hardcopy command:
 
 Assuming that the printfont is 10 point Courier, then you can lay the pages out as follows:
 
-Printing                | ...
+Layout                  | ...
 ----------------------- | --------------------------------------------------------------------
 Plain text on A4        | Text up to 80 characters across will fit onto A4 portrait
 Plain text, 2-up on A4  | Select A4 portrait, 2 pages per sheet
@@ -292,16 +292,16 @@ Ex command-line editing
 
 ### Pasting into the command line
 
-Paste text into the command line by using a Ctrl-R followed by:
+Paste text into the command line:
 
-Type        | ...
------------ | --------------------------------------------------------------------
-Ctrl-W      | The word under the cursor
-Ctrl-A      | The WORD under the cursor
-/           | The last / search string
-"           | The contents of the unnamed register, containing the text of the last delete or yank
-`*`         | The clipboard
-%           | The current file name
+Type            | ...
+--------------- | --------------------------------------------------------------------
+Ctrl-R Ctrl-W   | word under the cursor
+Ctrl-R Ctrl-A   | Whole WORD under the cursor
+Ctrl-R /        | Last / search string
+Ctrl-R "        | Contents of the unnamed register, containing the text of the last delete or yank
+Ctrl-R `*`      | Clipboard
+Ctrl-R %        | Current file name
 
 
 ### Current file name
@@ -310,7 +310,7 @@ To pass the current file name into a shell command, use the % character:
 
     :!attrib -r %
 
-Of course, I've mapped this particular command to ,wr in my vimrc file.
+Of course, I've mapped this particular command to `,wr` in my vimrc file.
 
 These ones are good, too:
 
@@ -318,7 +318,7 @@ Type                    | ...
 ----------------------- | --------------------------------------------------------------------
 #3                      | Name of the file in buffer 3
 %:p                     | Current file name complete with its full path
-%:h                     | Just the path to the current file, eg. :cd %:h changes the default directory to the current file's directory. I don't know why, but % sometimes expands to the full path, and sometimes only to the filename without the path. In the latter case, you need to use %:p:h to get the path to the current file.
+%:h                     | Just the path to the current file, eg. :cd %:h changes the default directory to the current file's directory
 %:r                     | Current file name without its extension. To edit the file that has the same name as the current file, but the extension .sm:
 %:r.sm                  |
 `:echo expand("%:r")`   | So exactly what do I get from a "%:r"?
