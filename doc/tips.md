@@ -18,8 +18,7 @@ How to crack the (very steep) learning curve into VIM:
 Moving around
 -------------
 
-Vertically
-~~~~~~~~~~
+### Vertically
 
 Scroll the cursor to the::
 
@@ -39,8 +38,8 @@ Back/forward to the start of this/the next::
 
 ( )::: Sentence.
 
-Horizontally
-~~~~~~~~~~~~
+
+### Horizontally
 
 Ctrl-H/L::
 Move the cursor half a screen left/right (this is my own mapping)
@@ -87,8 +86,7 @@ Move cursor to the other corner on the same line
 Editing
 -------
 
-Cut and paste
-~~~~~~~~~~~~~
+### Cut and paste
 
 yiw::
 Yank the current word
@@ -118,8 +116,8 @@ dB::
 Delete to the Beginning of the previous space-separated word. This is very handy for deleting word-by-word backwards
 from the end of a line, in combination with the . repeat command
 
-Registers
-~~~~~~~~~
+
+### Registers
 
 `:reg`::
 Which register holds what?
@@ -151,8 +149,8 @@ The small-delete register - deletions or changes of less than one line (unless p
 The black hole register (that's an underscore).
 Delete or change into this one to avoid losing the unnamed register or pushing down register 1.
 
-Capitalisation
-~~~~~~~~~~~~~~
+
+### Capitalisation
 
 ~::
 Switch the capitalisation of the current character or selection
@@ -163,8 +161,8 @@ Capitalise a word
 guw::
 Change a word to lower case
 
-Reformatting paragraphs
-~~~~~~~~~~~~~~~~~~~~~~~
+
+### Reformatting paragraphs
 
 setl tw=80::
 Set the text width (right margin) for the local buffer only
@@ -193,8 +191,7 @@ v<movement>S"  | Ginger     | "Ginger"     | visual Surround
 Searching
 ---------
 
-Within the file
-~~~~~~~~~~~~~~~
+### Within the file
 
 The magic `*`::
 To find the next instance of the whole word the cursor is on, simply press \*. To find the previous instance, press #. To
@@ -229,8 +226,8 @@ Carries out Normal mode commands xxxx on each line that contains pattern (:norma
 `:g/pattern/s#this#that#`::
 Substitute that for this on each line matching the pattern
 
-Search and replace
-~~~~~~~~~~~~~~~~~~
+
+### Search and replace
 
 The simple way:
 
@@ -250,8 +247,8 @@ To search in a selection:
 
    :'<,'>s#this#that#g
 
-Global search and replace within the file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Global search and replace within the file
 
    :%s#this#that#gc
 
@@ -276,8 +273,8 @@ Some tricks with :s
     2. Start the command with :%s#
     3. Type Ctrl-R / to drop in the contents of the last / search
 
-ctags
-~~~~~
+
+### ctags
 
 This needs more work - I haven't actually been using ctags. Download Exuberant ctags from the
 http://ctags.sourceforge.net/[ctags home page], and extract ctags.exe into somewhere on your path (I put it in c:\bin).
@@ -295,8 +292,8 @@ the root of the check-out as the current working directory, so this rebuilds the
 autocmd BufWritePost *.[ch] :silent !ctags %::
 Reruns ctags on the current file when we save it. This updates the tags file in the file's own directory.
 
-Grep
-~~~~
+
+### Grep
 
    :grep regexpr --include="*.{c,h,sm}"
    :vimgrep /an error/ *.c
@@ -305,8 +302,8 @@ Grep
 
 Hmm. More to come here.
 
-Tag list for the current file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Tag list for the current file
 
 To display functions, structures, variables, etc. in the current file in a window down the side of the screen, download
 and install http://www.vim.org/scripts/script.php?script_id=273[taglist.vim]. Once installed, turn it on and off by
@@ -316,8 +313,8 @@ typing:
 
 I have mapped this to ,tl in my vimrc file.
 
-Definition of the current identifier
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Definition of the current identifier
 
 VIM is capable of searching through the files in your include path to find instances of the identifier
 currently under the cursor. The commands of interest are:
@@ -433,8 +430,7 @@ printoptions. A4 portrait is the default:
 Ex command-line editing
 -----------------------
 
-Pasting into the command line
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Pasting into the command line
 
 Paste text into the command line by using a Ctrl-R followed by:
 
@@ -456,8 +452,8 @@ The clipboard
 %::
 The current file name
 
-Current file name
-~~~~~~~~~~~~~~~~~
+
+### Current file name
 
 To pass the current file name into a shell command, use the % character:
 
@@ -493,8 +489,8 @@ So what is the current file name (normal mode only)?
 1Ctrl-G::
 Fully-qualified
 
-Argument list
-~~~~~~~~~~~~~
+
+### Argument list
 
 `:args *.c`;;
 Set the arglist to all the *.c files, and edit the first one
@@ -508,15 +504,14 @@ Set the arglist to all the CMakeLists.txt files in any subdirectory below the cu
 Working with other applications
 -------------------------------
 
-SSH
-~~~
+### SSH
 
    :e scp://username@hostname//path/to/document
 
 Don't know yet how to manage a password. Works best with keys.
 
-Web-browser
-~~~~~~~~~~~
+
+### Web-browser
 
 To preview the current html file in a web-browser:
 
@@ -524,8 +519,8 @@ To preview the current html file in a web-browser:
 
 Of course, I've mapped this to a key-stroke (,wb)
 
-Windows Explorer
-~~~~~~~~~~~~~~~~
+
+### Windows Explorer
 
 To open new files into the currently-open gvim instance by default, add the --remote-silent option to the command line.
 In Windows Explorer, the Tools, Options, File Types, Advanced, Open, Application used to perform action should be set
