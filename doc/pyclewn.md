@@ -60,13 +60,18 @@ Starting Pyclewn
 
 Launch gdb with the target executable.
 
+    :lcd dirname/                               # Don't forget to change to the appropriate directory first.
     :Pyclewn gdb ./progname                     # or ...
     :Pyclewn gdb --args ./progname arg1 arg2
 
-We're away. Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
+The Python clewn application is started in the background, but gdb doesn't do anything until we issue a command.
+Pyclewn has most gdb commands mapped to `:Ccommand`, or you can run them with `:C command`.
 
     :Crun
     :C run
+
+Assuming we have the "break main" line in our .gdbinit script,
+The program is launched, breaks on the `main()` method, and the source file is displayed with breakpoint #1 showing.
 
 > Optionally, run Pyclewn (the Python app) itself in a debug console, to see its debug messages.
 >
