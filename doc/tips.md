@@ -157,12 +157,12 @@ To search in a selection:
 1. Make the selection, using v (character select) or V (line select)
 2. Type : to enter command mode. Vim will provide a prefix describing the selection, e.g.
 
-   :'<,'>
+        :'<,'>
 
 3. Enter the search-and-replace command using the substitute keyword, where the g means to make global replacements
    within each line:
 
-   :'<,'>s#this#that#g
+        :'<,'>s#this#that#g
 
 
 ### Global search and replace within the file
@@ -184,29 +184,22 @@ When the target is a regular expression, it can be very difficult to get it righ
 
 ### ctags
 
-This needs more work - I haven't actually been using ctags. Download Exuberant ctags from the
-[ctags home page][3], and extract ctags.exe into somewhere on your path (I put it in c:\bin).
+This needs more work - I haven't actually been using ctags.
+Download Exuberant ctags from the [ctags home page][3], and extract ctags.exe into somewhere on your path.
 
-Ctrl-]::
-Jumps directly to the declaration of the identifier under the cursor
-
-set tags=tags;/::
-Searches for the tags file in the current working directory, then recursively up through the directory structure:
-
-command! Ctags !ctags --file-scope=no -R .::
-Sets up the command :Ctags, which will rebuild the tags file from the current working directory down. I always work with
-the root of the check-out as the current working directory, so this rebuilds the root tags file.
-
-autocmd BufWritePost *.[ch] :silent !ctags %::
-Reruns ctags on the current file when we save it. This updates the tags file in the file's own directory.
-
+Type                        | ...
+--------------------------- | --------------------------------------------------------------------
+Ctrl-]                      | Jumps directly to the declaration of the identifier under the cursor
+set tags=tags;/             | Searches for the tags file in the current working directory, then recursively up through the directory structure:
+command! Ctags !ctags --file-scope=no -R .      | Sets up the command :Ctags, which will rebuild the tags file from the current working directory down. I always work with the root of the check-out as the current working directory, so this rebuilds the root tags file.
+`autocmd BufWritePost *.[ch] :silent !ctags %`  | Reruns ctags on the current file when we save it. This updates the tags file in the file's own directory.
 
 ### Grep
 
-   :grep regexpr --include="*.{c,h,sm}"
-   :vimgrep /an error/ *.c
-   :vimgrep /\<FileName\=/ *.h include/*
-   :vimgrep /myfunc/ **/*.c
+    :grep regexpr --include="*.{c,h,sm}"
+    :vimgrep /an error/ *.c
+    :vimgrep /\<FileName\=/ *.h include/*
+    :vimgrep /myfunc/ **/*.c
 
 Hmm. More to come here.
 
