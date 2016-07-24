@@ -6,14 +6,17 @@ Don't panic!
 
 How to crack the (very steep) learning curve into VIM:
 
-1. It's all in the configuration - the default vimrc file is very poor indeed, so you need to use someone
-   else's. Do this as part of the install process, before even trying to start using VIM.
-2. Do the tutorial - launch it from the command line by typing vimtutor. This copies the original file, and
-   opens VIM to edit it.
+1. It's all in the configuration
+    * The default vimrc file is poor indeed, so you need to use someone else's.
+    * Do this as part of the install process, before even trying to start using VIM.
+2. Do the tutorial
+    * Launch it from the command line by typing `vimtutor`.
+    * This copies the original file, and opens VIM to edit it.
 3. Make sure you are familiar with all the commands in the [Best Vim Tips][1]
-4. The rest of this document describes the things that won't be covered by the above. At time of writing, I'm
-   not describing how to set up your configuration and plug-ins here - I'm just assuming that they're set up
-   the same as mine. I need to think about how to standardise this.
+4. The rest of this document describes things that I find useful, but that (mostly) aren't covered by the above.
+    * I'm not describing how to set up your configuration and plug-ins here.
+    * I'm just assuming that they're set up the same as mine.
+
 
 Moving around
 -------------
@@ -373,19 +376,14 @@ In no particular order...
    a non-file buffer for viewing, and potentially saving as batch file.
 2. Browse the open buffers in the error or location window, and press Enter on the buffer I want to go to
 3. Move the current window up by one
-4. make, and click-through to the error lines
-5. grep this file, see and go to the various lines - well, I can do this one too, but it also needs polishing
-6. Modify the colourings and indentation for different file types, notably html files. In fact, the
-   auto-indentation for HTML is a complete PITA at the moment.
-7. Use the arrow keys when doing a visual selection
-8. Use the h key to move from the start of this line to the end of the preceding line
-9. Use `,/*` to comment the selected block in my preferred block-comment style.
-10. Auto-enter HTML tags
-11. Auto-fold HTML/XML files
-12. Re-load a VIM script file without having to exit and restart VIM
-13. Move this open file into the previous VIM instance, and close this new instance. Potentially automate this,
-    so that I only ever have one instance of VIM open.
-14. Title case
+4. Modify the colourings and indentation for different file types, notably html files.
+   Indeed, the auto-indentation for HTML is a complete PITA at the moment.
+5. Use the arrow keys when doing a visual selection
+6. Use the h key to move from the start of this line to the end of the preceding line
+7. Use `,/*` to comment the selected block in my preferred block-comment style.
+8. Auto-enter HTML tags
+9. Auto-fold HTML/XML files
+10. Title case
 
 
 [1]: http://vim.wikia.com/wiki/Best_Vim_Tips
