@@ -3,33 +3,33 @@ VIM tips and tricks
 
 <a href="#dont-panic">Don't panic!</a><br/>
 <a href="#moving-around">Moving around</a><br/>
-<a href="#vertically">    Vertically</a><br/>
-<a href="#horizontally">    Horizontally</a><br/>
+<a href="#vertically" style="padding-left: 30px">Vertically</a><br/>
+<a href="#horizontally" style="padding-left: 30px">Horizontally</a><br/>
 <a href="#selecting">Selecting</a><br/>
 <a href="#editing">Editing</a><br/>
-<a href="#cut-and-paste">    Cut and paste</a><br/>
-<a href="#registers">    Registers</a><br/>
-<a href="#capitalisation">    Capitalisation</a><br/>
-<a href="#reformatting-paragraphs">    Reformatting paragraphs</a><br/>
-<a href="#surround">    Surround</a><br/>
+<a href="#cut-and-paste" style="padding-left: 30px">Cut and paste</a><br/>
+<a href="#registers" style="padding-left: 30px">Registers</a><br/>
+<a href="#capitalisation" style="padding-left: 30px">Capitalisation</a><br/>
+<a href="#reformatting-paragraphs" style="padding-left: 30px">Reformatting paragraphs</a><br/>
+<a href="#surround" style="padding-left: 30px">Surround</a><br/>
 <a href="#searching">Searching</a><br/>
-<a href="#within-the-file">    Within the file</a><br/>
-<a href="#search-and-replace">    Search and replace</a><br/>
-<a href="#global-search-and-replace-within-the-file">    Global search and replace within the file</a><br/>
-<a href="#grep">    Grep</a><br/>
-<a href="#tag-list-for-the-current-file">    Tag list for the current file</a><br/>
-<a href="#definition-of-the-current-identifier">    Definition of the current identifier</a><br/>
+<a href="#within-the-file" style="padding-left: 30px">Within the file</a><br/>
+<a href="#search-and-replace" style="padding-left: 30px">Search and replace</a><br/>
+<a href="#global-search-and-replace-within-the-file" style="padding-left: 30px">Global search and replace within the file</a><br/>
+<a href="#grep" style="padding-left: 30px">Grep</a><br/>
+<a href="#tag-list-for-the-current-file" style="padding-left: 30px">Tag list for the current file</a><br/>
+<a href="#definition-of-the-current-identifier" style="padding-left: 30px">Definition of the current identifier</a><br/>
 <a href="#folding">Folding</a><br/>
 <a href="#tabs">Tabs</a><br/>
 <a href="#printing">Printing</a><br/>
 <a href="#ex-command-line-editing">Ex command-line editing</a><br/>
-<a href="#pasting-into-the-command-line">    Pasting into the command line</a><br/>
-<a href="#current-file-name">    Current file name</a><br/>
-<a href="#argument-list">    Argument list</a><br/>
+<a href="#pasting-into-the-command-line" style="padding-left: 30px">Pasting into the command line</a><br/>
+<a href="#current-file-name" style="padding-left: 30px">Current file name</a><br/>
+<a href="#argument-list" style="padding-left: 30px">Argument list</a><br/>
 <a href="#working-with-other-applications">Working with other applications</a><br/>
-<a href="#ssh">    SSH</a><br/>
-<a href="#web-browser">    Web-browser</a><br/>
-<a href="#windows-explorer">    Windows Explorer</a><br/>
+<a href="#ssh" style="padding-left: 30px">SSH</a><br/>
+<a href="#web-browser" style="padding-left: 30px">Web-browser</a><br/>
+<a href="#windows-explorer" style="padding-left: 30px">Windows Explorer</a><br/>
 <a href="#stuff-i-cant-do-yet">Stuff I can't do yet</a><br/>
 
 
