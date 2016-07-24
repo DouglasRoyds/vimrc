@@ -98,6 +98,7 @@ To see a list of all commands, and a list of all the possible arguments to a sel
     :C command <Ctrl-D>
 
 Turn on Pyclewn's debug-centric keyboard mappings (and turn them off again).
+I have mapped these, vim-unimpaired style, to `[op`, `]op`, and `cop`.
 
     :Cmapkeys
     :Cunmapkeys
