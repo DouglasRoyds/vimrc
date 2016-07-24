@@ -122,6 +122,12 @@ A subset of the default mappings:
 Be careful while editing with these key-mappings turned on, eg.
 A (append), C (change), and X (delete backwards) won't have the expected effect.
 
+When focused on the breakpoints window:
+
+    <CR>    Go to corresponding line in the source code
+    +       Toggle enabled/disabled
+    CTRL-K  Delete
+
 
 Exiting
 -------
