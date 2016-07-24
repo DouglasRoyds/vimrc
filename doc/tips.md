@@ -2,36 +2,36 @@ VIM tips and tricks
 ===================
 
 <pre>
-<a href="#dont-panic">Don't panic!</a><br/>
-<a href="#moving-around">Moving around</a><br/>
-    <a href="#vertically">Vertically</a><br/>
-    <a href="#horizontally">Horizontally</a><br/>
-<a href="#selecting">Selecting</a><br/>
-<a href="#editing">Editing</a><br/>
-    <a href="#cut-and-paste">Cut and paste</a><br/>
-    <a href="#registers">Registers</a><br/>
-    <a href="#capitalisation">Capitalisation</a><br/>
-    <a href="#reformatting-paragraphs">Reformatting paragraphs</a><br/>
-    <a href="#surround">Surround</a><br/>
-<a href="#searching">Searching</a><br/>
-    <a href="#within-the-file">Within the file</a><br/>
-    <a href="#search-and-replace">Search and replace</a><br/>
-    <a href="#global-search-and-replace-within-the-file">Global search and replace within the file</a><br/>
-    <a href="#grep">Grep</a><br/>
-    <a href="#tag-list-for-the-current-file">Tag list for the current file</a><br/>
-    <a href="#definition-of-the-current-identifier">Definition of the current identifier</a><br/>
-<a href="#folding">Folding</a><br/>
-<a href="#tabs">Tabs</a><br/>
-<a href="#printing">Printing</a><br/>
-<a href="#ex-command-line-editing">Ex command-line editing</a><br/>
-    <a href="#pasting-into-the-command-line">Pasting into the command line</a><br/>
-    <a href="#current-file-name">Current file name</a><br/>
-    <a href="#argument-list">Argument list</a><br/>
-<a href="#working-with-other-applications">Working with other applications</a><br/>
-    <a href="#ssh">SSH</a><br/>
-    <a href="#web-browser">Web-browser</a><br/>
-    <a href="#windows-explorer">Windows Explorer</a><br/>
-<a href="#stuff-i-cant-do-yet">Stuff I can't do yet</a><br/>
+<a href="#dont-panic">Don't panic!</a>
+<a href="#moving-around">Moving around</a>
+    <a href="#vertically">Vertically</a>
+    <a href="#horizontally">Horizontally</a>
+<a href="#selecting">Selecting</a>
+<a href="#editing">Editing</a>
+    <a href="#cut-and-paste">Cut and paste</a>
+    <a href="#registers">Registers</a>
+    <a href="#capitalisation">Capitalisation</a>
+    <a href="#reformatting-paragraphs">Reformatting paragraphs</a>
+    <a href="#surround">Surround</a>
+<a href="#searching">Searching</a>
+    <a href="#within-the-file">Within the file</a>
+    <a href="#search-and-replace">Search and replace</a>
+    <a href="#global-search-and-replace-within-the-file">Global search and replace within the file</a>
+    <a href="#grep">Grep</a>
+    <a href="#tag-list-for-the-current-file">Tag list for the current file</a>
+    <a href="#definition-of-the-current-identifier">Definition of the current identifier</a>
+<a href="#folding">Folding</a>
+<a href="#tabs">Tabs</a>
+<a href="#printing">Printing</a>
+<a href="#ex-command-line-editing">Ex command-line editing</a>
+    <a href="#pasting-into-the-command-line">Pasting into the command line</a>
+    <a href="#current-file-name">Current file name</a>
+    <a href="#argument-list">Argument list</a>
+<a href="#working-with-other-applications">Working with other applications</a>
+    <a href="#ssh">SSH</a>
+    <a href="#web-browser">Web-browser</a>
+    <a href="#windows-explorer">Windows Explorer</a>
+<a href="#stuff-i-cant-do-yet">Stuff I can't do yet</a>
 </pre>
 
 
