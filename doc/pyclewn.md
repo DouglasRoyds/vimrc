@@ -60,7 +60,7 @@ Starting Pyclewn
 
 Launch Pyclewn and gdb from within Vim:
 
-    :lcd dirname/                               # Don't forget to change to the appropriate directory first.
+    :lcd builddir/                              # Don't forget to change to the appropriate directory first.
     :Pyclewn gdb ./progname                     # or ...
     :Pyclewn gdb --args ./progname arg1 arg2
 
@@ -94,7 +94,7 @@ Issue commands to gdb by prefixing them with `:C`.
 To see a list of all commands, and a list of all the possible arguments to a selected command:
 
     :C <Ctrl-D>
-    :Ccommand <Ctrl-D>
+    :Ccommand <Ctrl-D>          # or ...
     :C command <Ctrl-D>
 
 Turn on Pyclewn's debug-centric keyboard mappings (and turn them off again).
