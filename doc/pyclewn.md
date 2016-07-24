@@ -143,7 +143,11 @@ Problems
 
 I am unable to:
 
- - Restart Pyclewn within the same Vim session.
+ - Restart Pyclewn within the same Vim session, though I have found a work-around:
+    * :Cexitclewn
+    * :Pyclewn ... (fails)
+    * :Cexitclewn
+    * :Pyclewn ... (succeeds)
  - Set g:pyclewn_args="--terminal='xfce4-terminal,-x'" to launch xfce4-terminal, either from inside Vim or the command-line.
    The default xterm -e does seem to work, so that's OK.
 
