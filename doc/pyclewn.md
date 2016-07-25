@@ -181,18 +181,17 @@ All done. Regrettably, exiting doesn't unmap the Pyclewn keys.
     :Cunmapkeys
 
 
-Problems
---------
+Still to come
+-------------
 
-I am unable to:
-
- - Restart Pyclewn within the same Vim session, though I have found a work-around:
+ - Using the Pyclewn variables window (see :help pyclewn-variables)
+ - I am unable to restart Pyclewn within the same Vim session, though I have found a work-around:
     * :Cexitclewn
     * :Pyclewn ... (fails)
     * :Cexitclewn
     * :Pyclewn ... (succeeds)
- - Set g:pyclewn_args="--terminal='xfce4-terminal,-x'" to launch xfce4-terminal, either from inside Vim or the command-line.
-   The default xterm -e does seem to work, so that's OK.
+ - I am unable to set g:pyclewn_args="--terminal='xfce4-terminal,-x'" to launch xfce4-terminal,
+   either from inside Vim or the command-line. The default xterm -e does seem to work, so that's OK.
 
 
 [1]: http://stackoverflow.com/questions/6695410/gdb-front-end-to-use-with-vim/8324543#8324543
