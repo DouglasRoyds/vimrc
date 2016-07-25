@@ -127,7 +127,7 @@ it will be shown in a new (or existing) split in the rightmost window.
 If you launch Pyclewn in a new tab of its own, breakpoints will be displayed in an existing (or new) split in another
 tab, ie. Pyclewn keeps only its own windows in its tab. Pyclewn's intention is that you can have multiple source files
 open in multiple tabs, and it will find them to display them as required.
-This is not how I would like it to work, so in my case, I'm better to stick with just the one tab.
+This is not how I like to work, so I stick with just the one tab.
 
 
 Debugging
