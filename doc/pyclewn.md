@@ -87,6 +87,49 @@ the program is launched, breaks on the `main()` method, and the source file is d
 >     :Pyclewn gdb ./progname
 
 
+Windows and tabs
+----------------
+
+If Pyclewn is started in an otherwise empty Vim instance, it opens its normal windows at the top,
+leaving an empty window at the bottom. If you already have files open, the Pyclewn windows are opened above them:
+
+    +--------------------------------------------------+
+    | GDB console                                      |
+    +--------------------------------------------------+
+    | Breakpoints    | Backtrace      | Threads        |
+    +--------------------------------------------------+
+    | Empty, or existing files                         |
+    +--------------------------------------------------+
+
+On my wide screen, I don't find this a useful layout, so now's the time to move things around.
+Stack all the existing windows vertically.
+
+    :windo wincmd K
+
+Now focus on the empty (or existing file) window, and move it to a right vertical split.
+
+    Ctrl-W L
+
+    +-------------------------+-------------------------+
+    | GDB console             | Empty, or existing file |
+    +-------------------------+                         |
+    | Breakpoints             |                         |
+    +-------------------------+                         |
+    | Backtrace               |                         |
+    +-------------------------+                         |
+    | Threads                 |                         |
+    +-------------------------+-------------------------+
+
+Now, whenever gdb hits a breakpoint, it will be shown in this rightmost window.
+If you click on (or press <CR> on) a breakpoint in the Breakpoints windows,
+it will be shown in a new (or existing) split in the rightmost window.
+
+If you launch Pyclewn in a new tab of its own, breakpoints will be displayed in an existing (or new) split in another
+tab, ie. Pyclewn keeps only its own windows in its tab. Pyclewn's intention is that you can have multiple source files
+open in multiple tabs, and it will find them to display them as required.
+This is not how I would like it to work, so in my case, I'm better to stick with just the one tab.
+
+
 Debugging
 ---------
 
