@@ -30,7 +30,7 @@ Plugin 'https://github.com/justinmk/vim-sneak'
 Plugin 'https://github.com/moll/vim-bbye'
 Plugin 'https://github.com/tpope/vim-dispatch'
 Plugin 'https://github.com/tpope/vim-fugitive'
-Plugin 'https://github.com/tpope/vim-repeat'
+Plugin 'https://github.com/tpope/vim-repeat'          " Helpful for vim-surround, making the . command work
 Plugin 'https://github.com/tpope/vim-surround'
 Plugin 'https://github.com/tpope/vim-unimpaired'
 Plugin 'https://github.com/tpope/vim-vinegar'
