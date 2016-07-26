@@ -54,6 +54,8 @@ let g:gitgutter_realtime = 0
 nmap ff <Plug>SneakForward
 nmap FF <Plug>SneakBackward
 
+nmap <Leader>bd :Bdelete<cr>
+
 "-------------------------------------- Default settings --------------------------------------------------------------
 
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
