@@ -18,31 +18,32 @@ set cpoptions-=a        " Don't change the alternate filename when using :read f
 " Initialise
 filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim/,$HOME/vimfiles/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " Vundle must manage Vundle (required)
-Bundle 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " GitHub
-Bundle 'DouglasRoyds/local_vimrc.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'jceb/vim-shootingstar'
-Bundle 'justinmk/vim-sneak'
-Bundle 'moll/vim-bbye'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vinegar'
-Bundle 'vim-scripts/DirDiff.vim.git'
+Plugin 'DouglasRoyds/local_vimrc.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'jceb/vim-shootingstar'
+Plugin 'justinmk/vim-sneak'
+Plugin 'moll/vim-bbye'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-vinegar'
+Plugin 'vim-scripts/DirDiff.vim.git'
 
-" vim-scripts repos
-"Bundle 'L9'
+" vim-scripts http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
 
 " Non-GitHub
-"Bundle 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 
+call vundle#end()            " required
 filetype plugin indent on     " Required
 
 "-------------------------------------- Plug-in settings --------------------------------------------------------------
