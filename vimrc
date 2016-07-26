@@ -297,7 +297,7 @@ nmap <Leader>fn :let @+=expand("%:p")<cr>
 nmap <Leader>fp :let @+=expand("%:p:h")<cr>
 
 " Trim trailing spaces
-nmap <Leader>ts :%s/\s\+$//g<CR><C-O>
+nmap <Leader>tts :%s/\s\+$//g<CR><C-O>
 
 " Twiddle words right and left.
 " With very-magic turned on:
