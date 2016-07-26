@@ -13,7 +13,7 @@ set nocompatible
 set cpoptions-=a        " Don't change the alternate filename when using :read file
 
 "-------------------------------------- Vundle ------------------------------------------------------------------------
-" See https://github.com/gmarik/vundle
+" See https://github.com/VundleVim/Vundle.vim
 
 " Initialise
 filetype off
@@ -21,27 +21,20 @@ set runtimepath+=~/.vim/bundle/Vundle.vim/,$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle must manage Vundle (required)
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'https://github.com/VundleVim/Vundle.vim'
 
-" GitHub
-Plugin 'airblade/vim-gitgutter'
-Plugin 'embear/vim-localvimrc'
-Plugin 'jceb/vim-shootingstar'
-Plugin 'justinmk/vim-sneak'
-Plugin 'moll/vim-bbye'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-vinegar'
-Plugin 'vim-scripts/DirDiff.vim.git'
-
-" vim-scripts http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-
-" Non-GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'https://github.com/airblade/vim-gitgutter'
+Plugin 'https://github.com/embear/vim-localvimrc'
+Plugin 'https://github.com/jceb/vim-shootingstar'
+Plugin 'https://github.com/justinmk/vim-sneak'
+Plugin 'https://github.com/moll/vim-bbye'
+Plugin 'https://github.com/tpope/vim-dispatch'
+Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'https://github.com/tpope/vim-repeat'
+Plugin 'https://github.com/tpope/vim-surround'
+Plugin 'https://github.com/tpope/vim-unimpaired'
+Plugin 'https://github.com/tpope/vim-vinegar'
+Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'
 
 call vundle#end()             " Required
 filetype plugin indent on     " Required
