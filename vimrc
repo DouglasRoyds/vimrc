@@ -43,7 +43,7 @@ Plugin 'vim-scripts/DirDiff.vim.git'
 " Non-GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 
-call vundle#end()            " required
+call vundle#end()             " Required
 filetype plugin indent on     " Required
 
 "-------------------------------------- Plug-in settings --------------------------------------------------------------
@@ -53,7 +53,7 @@ filetype plugin indent on     " Required
 let g:localvimrc_name = ['.local.vim', '.IDR.local.vim']
 let g:localvimrc_sandbox = 0
 let g:localvimrc_persistent = 1
-let g:localvimrc_persistence_file =  $HOME . "/.localvimrc/persistent"
+let g:localvimrc_persistence_file =  $HOME."/.localvimrc/persistent"
 
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
 let g:gitgutter_realtime = 0
