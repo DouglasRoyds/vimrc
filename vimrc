@@ -464,14 +464,6 @@ augroup vimrc
 
 augroup END
 
-" Trim all trailing space on every write
-" http://vim.wikia.com/wiki/Remove_unwanted_spaces
-" In its own augroup so that it can be safely deleted by projects that don't want it
-augroup trim_trailing_spaces
-   autocmd!
-   autocmd BufWritePre * :%s/\s\+$//e
-augroup END
-
 "-------------------------------------- Extra scripts and plugins ----------------------------------------------------
 
 " ftplugin/man.vim has to be sourced at startup so that the :Man command is available
