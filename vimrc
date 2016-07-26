@@ -24,8 +24,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " GitHub
-Plugin 'DouglasRoyds/local_vimrc.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'embear/vim-localvimrc'
 Plugin 'jceb/vim-shootingstar'
 Plugin 'justinmk/vim-sneak'
 Plugin 'moll/vim-bbye'
@@ -48,7 +48,12 @@ filetype plugin indent on     " Required
 
 "-------------------------------------- Plug-in settings --------------------------------------------------------------
 
-let g:local_vimrc = '.project.vim'
+" Don't load localvimrc file in a sandbox, ie. allow it to do anything
+" Store and restore decisions only if the answer was given in upper case (Y/N/A)
+let g:localvimrc_name = ['.local.vim', '.IDR.local.vim']
+let g:localvimrc_sandbox = 0
+let g:localvimrc_persistent = 1
+let g:localvimrc_persistence_file =  $HOME . "/.localvimrc/persistent"
 
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
 let g:gitgutter_realtime = 0
