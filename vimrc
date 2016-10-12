@@ -23,18 +23,18 @@ call vundle#begin()
 " Vundle must manage Vundle (required)
 Plugin 'https://github.com/VundleVim/Vundle.vim'
 
-Plugin 'https://github.com/airblade/vim-gitgutter'
-Plugin 'https://github.com/embear/vim-localvimrc'
-Plugin 'https://github.com/jceb/vim-shootingstar'
-Plugin 'https://github.com/justinmk/vim-sneak'
-Plugin 'https://github.com/moll/vim-bbye'
-Plugin 'https://github.com/tpope/vim-dispatch'
-Plugin 'https://github.com/tpope/vim-fugitive'
-Plugin 'https://github.com/tpope/vim-repeat'          " Helpful for vim-surround, making the . command work
-Plugin 'https://github.com/tpope/vim-surround'
-Plugin 'https://github.com/tpope/vim-unimpaired'
-Plugin 'https://github.com/tpope/vim-vinegar'
-Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'
+Plugin 'https://github.com/airblade/vim-gitgutter'       " Git diff markers in the gutter + staging/undoing hunks
+Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim file in the root of a project directory
+Plugin 'https://github.com/jceb/vim-shootingstar'        " <Leader>* putting cursor at the same position within a word
+Plugin 'https://github.com/justinmk/vim-sneak'           " In my case, ff and FF movements
+Plugin 'https://github.com/moll/vim-bbye'                " :Bdelete buffers without wrecking my window layout
+Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
+Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
+Plugin 'https://github.com/tpope/vim-repeat'             " Makes the . command work with plugins, notably vim-surround
+Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
+Plugin 'https://github.com/tpope/vim-unimpaired'         " Mappings such as ]q for :cnext, and coh for :set hlsearch!
+Plugin 'https://github.com/tpope/vim-vinegar'            " Press - in any buffer to hop up to the directory listing
+Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'  " :DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
 call vundle#end()             " Required
 filetype plugin indent on     " Required
@@ -51,6 +51,7 @@ let g:localvimrc_persistence_file =  $HOME."/.localvimrc/persistent"
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
 let g:gitgutter_realtime = 0
 
+" I've always really liked the s and S commands, so use ff and FF for vim-sneak
 nmap ff <Plug>SneakForward
 nmap FF <Plug>SneakBackward
 
