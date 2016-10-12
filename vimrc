@@ -28,6 +28,7 @@ Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim fil
 Plugin 'https://github.com/jceb/vim-shootingstar'        " <Leader>* putting cursor at the same position within a word
 Plugin 'https://github.com/justinmk/vim-sneak'           " In my case, ff and FF movements
 Plugin 'https://github.com/moll/vim-bbye'                " :Bdelete buffers without wrecking my window layout
+Plugin 'https://github.com/tpope/vim-abolish'            " :Subvert/child{,ren}/adult{,s}/g and crs, crm, crc, cru
 Plugin 'https://github.com/tpope/vim-commentary'         " Comment stuff out with gcc, gcap, (visual) gc
 Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
 Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
