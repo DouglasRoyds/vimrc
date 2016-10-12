@@ -33,6 +33,7 @@ Plugin 'https://github.com/tpope/vim-commentary'         " Comment stuff out wit
 Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
 Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
 Plugin 'https://github.com/tpope/vim-repeat'             " Makes the . command work with plugins, notably vim-surround
+Plugin 'https://github.com/tpope/vim-speeddating'        " Ctrl-A/X for dates and times
 Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
 Plugin 'https://github.com/tpope/vim-unimpaired'         " Mappings such as ]q for :cnext, and coh for :set hlsearch!
 Plugin 'https://github.com/tpope/vim-vinegar'            " Press - in any buffer to hop up to the directory listing
