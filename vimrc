@@ -28,6 +28,7 @@ Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim fil
 Plugin 'https://github.com/jceb/vim-shootingstar'        " <Leader>* putting cursor at the same position within a word
 Plugin 'https://github.com/justinmk/vim-sneak'           " In my case, ff and FF movements
 Plugin 'https://github.com/moll/vim-bbye'                " :Bdelete buffers without wrecking my window layout
+Plugin 'https://github.com/tpope/vim-commentary'         " Comment stuff out with gcc, gcap, (visual) gc
 Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
 Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
 Plugin 'https://github.com/tpope/vim-repeat'             " Makes the . command work with plugins, notably vim-surround
@@ -343,27 +344,6 @@ nmap <Leader>j <C-W>j<C-W>_
 nmap <Leader>k <C-W>k<C-W>_
 nmap <Leader>h <C-W>h
 nmap <Leader>l <C-W>l
-
-"-------------------------------------- Commenting/Uncommenting code --------------------------------------------------
-" Horrors! .vimrc is not the place for this.
-" I want one mapping for line comments, one for blocks.
-" The file type should determine the resulting comment style.
-" Can I select a line or block comment according to visual or normal mode?
-" Kinda works:
-"nmap <Leader>// I// <Esc>
-" Almost kinda works:
-"vmap <Leader>// s/*<CR>/<Esc>P
-"" Line comments
-"map <Leader># :s/^/#/<CR>                                   " Shell, gawk comment
-"map <Leader>/ :s/^/\/\/ /<CR>                               " C++ comment
-"map <Leader>" :s/^/\"/<CR>                                  " Vim comment
-"map <Leader>c :s/^\/\/\\|^[#"]//<CR>                        " Remove line comments
-"
-"" Block comments - These aren't at all what I require - they put the comment around each individual line
-""                  In fact, they're so bad that I'm not using them
-"map <Leader>* :s/^\(.*\)$/\/\* \1 \*\//<CR>                             " C block comment
-"map <Leader>< :s/^\(.*\)$/<!-- \1 -->/<CR>                              " HTML block comment
-"map <Leader>d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>    " Remove block comments
 
 "-------------------------------------- Custom commands ---------------------------------------------------------------
 
