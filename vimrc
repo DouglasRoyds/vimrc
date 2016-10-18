@@ -23,21 +23,21 @@ call vundle#begin()
 " Vundle must manage Vundle (required)
 Plugin 'https://github.com/VundleVim/Vundle.vim'
 
-Plugin 'https://github.com/airblade/vim-gitgutter'       " Git diff markers in the gutter + staging/undoing hunks
+Plugin 'https://github.com/airblade/vim-gitgutter'       " Jump with ]c, stage/unstage hunks with <Leader>hs/hu
 Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim file in the root of a project directory
-Plugin 'https://github.com/jceb/vim-shootingstar'        " <Leader>* putting cursor at the same position within a word
-Plugin 'https://github.com/justinmk/vim-sneak'           " In my case, ff and FF movements
-Plugin 'https://github.com/moll/vim-bbye'                " :Bdelete buffers without wrecking my window layout
-Plugin 'https://github.com/tpope/vim-abolish'            " :Subvert/child{,ren}/adult{,s}/g and crs, crm, crc, cru
+Plugin 'https://github.com/jceb/vim-shootingstar'        " Like the magic * but start matching at the cursor position
+Plugin 'https://github.com/justinmk/vim-sneak'           " ff and FF movements
+Plugin 'https://github.com/moll/vim-bbye'                " Bdelete buffers without wrecking my window layout
+Plugin 'https://github.com/tpope/vim-abolish'            " Subvert/child{,ren}/adult{,s}/g and coerce case with crs/m/c/u
 Plugin 'https://github.com/tpope/vim-commentary'         " Comment stuff out with gcc, gcap, (visual) gc
 Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
 Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
 Plugin 'https://github.com/tpope/vim-repeat'             " Makes the . command work with plugins, notably vim-surround
 Plugin 'https://github.com/tpope/vim-speeddating'        " Ctrl-A/X for dates and times
 Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
-Plugin 'https://github.com/tpope/vim-unimpaired'         " Mappings such as ]q for :cnext, and coh for :set hlsearch!
-Plugin 'https://github.com/tpope/vim-vinegar'            " Press - in any buffer to hop up to the directory listing
-Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'  " :DirDiff dirA dirB<cr>, <CR> on a file to diff it
+Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q for :cnext, and coh for :set hlsearch!
+Plugin 'https://github.com/tpope/vim-vinegar'            " Press - for a directory listing
+Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'  " DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
 call vundle#end()             " Required
 filetype plugin indent on     " Required
