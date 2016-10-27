@@ -52,7 +52,9 @@ let g:localvimrc_persistent = 1
 let g:localvimrc_persistence_file =  $HOME."/.localvimrc/persistent"
 
 " In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
+" Move to the next after staging a hunk.
 let g:gitgutter_realtime = 0
+nmap <Leader>hs <Plug>GitGutterStageHunk <Plug>GitGutterNextHunk
 
 " I've always really liked the s and S commands, so use ff and FF for vim-sneak
 nmap ff <Plug>SneakForward
