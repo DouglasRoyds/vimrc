@@ -7,7 +7,7 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 
 " Add a debug message for the variable under the cursor
-nnoremap <buffer> <Leader>dm yiwoprint("<C-R>" = "+<C-R>")<ESC>
+nnoremap <buffer> <Leader>dm yiwoprint("<C-R>" = %s" % <C-R>")<ESC>
 
 " Line comments
 nnoremap <buffer> <Leader>#  I# <Esc>
