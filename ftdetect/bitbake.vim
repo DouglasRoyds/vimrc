@@ -13,6 +13,7 @@ endif
 " .bb and .bbclass
 "au BufNewFile,BufRead *.b{b,bclass}	set filetype=bitbake
 au BufNewFile,BufRead *.{bb,bbclass}	set filetype=sh
+au BufNewFile,BufRead *.bbappend	set filetype=sh
 
 " .inc
 au BufNewFile,BufRead *.inc 		set filetype=sh
