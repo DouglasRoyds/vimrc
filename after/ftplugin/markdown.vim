@@ -13,6 +13,3 @@ nnoremap <buffer> <LocalLeader>t3 I### A ###
 nnoremap <buffer> <LocalLeader>t4 I#### A ####
 nnoremap <buffer> <LocalLeader>t5 I##### A #####
 
-" Convert an ASCII-art tree into UTF-8
-vnoremap <buffer> <LocalLeader>tr :s/\|--/├──/<CR>gv:s/`--/└──/<CR>gv:s/\|   /│   /g<CR>
-
