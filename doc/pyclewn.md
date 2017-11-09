@@ -121,7 +121,7 @@ Now focus on the empty (or existing file) window, and move it to a right vertica
     +-------------------------+-------------------------+
 
 Now, whenever gdb hits a breakpoint, it will be shown in this rightmost window.
-If you click on (or press <CR> on) a breakpoint in the Breakpoints windows,
+If you click on (or press `Enter` on) a breakpoint in the Breakpoints windows,
 it will be shown in a new (or existing) split in the rightmost window.
 
 If you launch Pyclewn in a new tab of its own, breakpoints will be displayed in an existing (or new) split in another
