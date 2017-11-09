@@ -167,7 +167,7 @@ A (append), C (change), and X (delete backwards) won't have the expected effect.
 
 When focused on the breakpoints window:
 
-    <CR>    Go to corresponding line in the source code
+    Enter   Go to corresponding line in the source code
     +       Toggle enabled/disabled
     CTRL-K  Delete
 
