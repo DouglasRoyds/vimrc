@@ -8,13 +8,6 @@ command! -complete=file -nargs=+ SvnDiff call SubversionDiff(<q-args>)
 command! SvnBlame call SubversionBlame()
 command! -nargs=1 SvnCat call SubversionCat(<q-args>)
 
-" Grep out the externals messages, as I find them annoying
-" If Grep finds no matches (or even no input), it returns 1, which Vim reports
-" Map an exit code == 1 to success, all other exit codes to failure
-nmap <Leader>vs :!svn status <Bar> egrep -v '^X\|external\|^$' <Bar><Bar> [ $? -eq 1 ] <cr>
-nmap <Leader>vdd :!svn diff -x-wu % \| colordiff<cr>
-nmap <Leader>vda :!svn diff -x-wu --no-diff-deleted \| colordiff \| less -r<cr>
-
 function! SubversionDiff(args)
    let targetFilename = expand("%")
    let tempFilename = expand("%:t")
