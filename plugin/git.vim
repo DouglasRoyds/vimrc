@@ -22,6 +22,10 @@ function! GitSetBufferMappings(filename)
    let b:git_repo_dir = GitRepoDir(a:filename)
    if empty(b:git_repo_dir)
       unlet b:git_repo_dir
+
+      " I frequently type these ones brainlessly, so make them no-ops
+      nnoremap <buffer> <LocalLeader>git <Nop>
+      nnoremap <buffer> <Leader>tput <Nop>
       return
    endif
 
@@ -34,9 +38,6 @@ function! GitSetBufferMappings(filename)
    " Set colour white and clear the screen
    " Just while git-gutter is still tripping up the console output
    nnoremap <buffer> <LocalLeader>tput :!tput sgr0 && tput clear <cr>
-
-   " I frequently type these ones brainlessly, so make them no-ops
-   nnoremap <buffer> <LocalLeader>trk <Nop>
 
 endfun
 
