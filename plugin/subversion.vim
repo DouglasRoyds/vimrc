@@ -76,6 +76,7 @@ function! SubversionSetBufferMappings(filename)
    let b:svn_trunk_dir = SubversionTrunkDir(a:filename)
    if empty(b:svn_trunk_dir)
       unlet b:svn_trunk_dir
+      nnoremap <buffer> <LocalLeader>trk <Nop>
       return
    endif
 
@@ -88,10 +89,6 @@ function! SubversionSetBufferMappings(filename)
 
    " lcd applies to the *window*, not to the buffer
    nnoremap <buffer> <LocalLeader>trk :exe "lcd" fnameescape(b:svn_trunk_dir) <bar> pwd <cr>
-
-   " I frequently type these ones brainlessly, so make them no-ops
-   nnoremap <buffer> <LocalLeader>git <Nop>
-   nnoremap <buffer> <Leader>tput <Nop>
 
 endfun
 
