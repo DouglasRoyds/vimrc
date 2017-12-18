@@ -68,7 +68,7 @@ function! SubversionTrunkDir(filename)
 endfun
 
 function! SubversionSetBufferMappings(filename)
-   if exists("b:svn_buffer_mappings_already_set") || exists("b:git_buffer_mappings_already_set")
+   if exists("b:svn_buffer_mappings_already_set") || exists("b:git_repo_dir")
       return
    endif
    let b:svn_buffer_mappings_already_set = 1
