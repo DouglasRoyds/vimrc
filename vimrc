@@ -24,6 +24,7 @@ call vundle#begin()
 Plugin 'https://github.com/VundleVim/Vundle.vim'
 
 Plugin 'https://github.com/airblade/vim-gitgutter'       " Jump with ]c, stage/unstage hunks with <Leader>hs/hu
+Plugin 'https://github.com/chrisbra/unicode.vim'         " Digraph search, autocompletion
 Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim file in the root of a project directory
 Plugin 'https://github.com/jceb/vim-shootingstar'        " Like the magic * but start matching at the cursor position
 Plugin 'https://github.com/justinmk/vim-sneak'           " ff and FF movements
