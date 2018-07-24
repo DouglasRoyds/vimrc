@@ -60,6 +60,8 @@ nmap <Leader>tput :!tput sgr0 && tput clear<CR>
 " I've always really liked the s and S commands, so use ff and FF for vim-sneak
 nmap ff <Plug>SneakForward
 nmap FF <Plug>SneakBackward
+"vmap ff <Plug>SneakForward      " Not working
+"vmap FF <Plug>SneakBackward
 
 nmap <Leader>bd :Bdelete<cr>
 
