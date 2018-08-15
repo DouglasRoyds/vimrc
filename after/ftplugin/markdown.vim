@@ -13,3 +13,9 @@ nnoremap <buffer> <LocalLeader>t3 I### A ###
 nnoremap <buffer> <LocalLeader>t4 I#### A ####
 nnoremap <buffer> <LocalLeader>t5 I##### A #####
 
+" Generate a markdown table-of-contents line for this heading
+"
+" This is a heading    <--- Place cursor on this line, and issue <Leader>toc
+" -----------------
+nnoremap <buffer> <LocalLeader>toc yyppkI * [A](#j0gu$:s# #-#gkJxA)
+
