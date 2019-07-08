@@ -52,6 +52,8 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_persistent = 1
 let g:localvimrc_persistence_file =  $HOME."/.localvimrc/persistent"
 
+set updatetime=500                  " Speeds gitgutter response
+
 " I've always really liked the s and S commands, so use ff and FF for vim-sneak
 nmap ff <Plug>SneakForward
 nmap FF <Plug>SneakBackward
