@@ -52,11 +52,6 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_persistent = 1
 let g:localvimrc_persistence_file =  $HOME."/.localvimrc/persistent"
 
-" In the meantime, GitGutter's realtime diff'ing seems to make the gutter disappear after 4 seconds.
-" Until I've sorted it out, GitGutter is wreaking havoc with the shell colours
-let g:gitgutter_realtime = 0
-nmap <Leader>tput :!tput sgr0 && tput clear<CR>
-
 " I've always really liked the s and S commands, so use ff and FF for vim-sneak
 nmap ff <Plug>SneakForward
 nmap FF <Plug>SneakBackward
