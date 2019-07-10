@@ -128,7 +128,7 @@ if ! has('gui_running')
 endif
 
 " I set the cursorline on with an autocmd on WinEnter (see the autocmds section below).
-" With the aid of vim-unimpaired, cursorcolumn can be toggled with coc
+" With the aid of vim-unimpaired, cursorcolumn can be toggled with cou
 set cursorline
 highlight CursorLine cterm=none term=none
 highlight CursorLine ctermbg=234
