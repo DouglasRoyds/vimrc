@@ -57,7 +57,7 @@ nmap FF <Plug>SneakBackward
 "vmap ff <Plug>SneakForward      " Not working
 "vmap FF <Plug>SneakBackward
 
-nmap <Leader>bd :Bdelete<cr>
+noremap <Leader>bd :Bdelete<cr>
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
@@ -199,49 +199,49 @@ set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 " Shift-F3 will be recursive grep
 " Shift-F3 isn't working for now, so I'll make straight F3 do the recursive grep
 "  Ctrl-F3 will be toggle highlight search
-nmap <F3>   :grep '<C-R><C-W>' -rn .
-nmap <S-F3> :grep <C-R><C-W> -rn .
-imap <F3>   <C-O><F3>
-imap <S-F3> <C-O><S-F3>
-imap <C-F3> <C-O><C-F3>
+noremap <F3>   :grep '<C-R><C-W>' -rn .
+noremap <S-F3> :grep <C-R><C-W> -rn .
+inoremap <F3>   <C-O><F3>
+inoremap <S-F3> <C-O><S-F3>
+inoremap <C-F3> <C-O><C-F3>
 
 " Ctrl-F4 will close the current window and buffer
 " Use Ctrl-Shift-F4 if the file hasn't been saved
-nmap <C-F4> :bd<CR>
-nmap <C-S-F4> :bd!<CR>
+nnoremap <C-F4> :bd<CR>
+nnoremap <C-S-F4> :bd!<CR>
 
 " Toggle word-wrap
-nmap <F6> :setl wrap!<bar>:set wrap?<CR>
-imap <F6> <C-O><F6>
+nnoremap <F6> :setl wrap!<bar>:set wrap?<CR>
+inoremap <F6> <C-O><F6>
 
 nnoremap <F9> :Dispatch<CR>
 
 " Toggle spell-check
-nmap <F12> :set spell!<CR>
-imap <F12> <C-O><F12>
+nnoremap <F12> :set spell!<CR>
+inoremap <F12> <C-O><F12>
 
 "-------------------------------------- Key-stroke mappings -----------------------------------------------------------
 
 " Backspace key will delete, not just move the cursor
-nmap <BS> X
+nnoremap <BS> X
 
 " Back and forward to previous/next location, browser-style
-nmap <M-Left> <C-O>
-nmap <M-Right> <Tab>
+nnoremap <M-Left> <C-O>
+nnoremap <M-Right> <Tab>
 
 " Make Y and S behave like other "capital" commands, and yank/substitute to the end of the line
-map Y y$
+noremap Y y$
 
 " I prefer to move up and down display-line-wise, rather than text line-wise.
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Movement key acceleration: Hold down the ctrl key to move up and down in
 " steps of 5, or left and right in half screen-widths
-nmap <c-J> 5j
-nmap <c-K> 5k
-nmap <c-H> :normal <C-R>=winwidth(0)/2<CR>h<CR>
-nmap <c-L> :normal <C-R>=winwidth(0)/2<CR>l<CR>
+nnoremap <c-J> 5j
+nnoremap <c-K> 5k
+nnoremap <c-H> :normal <C-R>=winwidth(0)/2<CR>h<CR>
+nnoremap <c-L> :normal <C-R>=winwidth(0)/2<CR>l<CR>
 
 " zz leaves the cursor line 10 lines *above* the middle of the screen
 " zZ scrolls the cursor to centre of the screen horizontally: zs, zZ, ze
@@ -291,15 +291,15 @@ let mapleader=","
 let maplocalleader=","
 
 " Change directory to that containing the current file
-nmap <Leader>cd :cd %:h <bar> pwd<cr>
-nmap <Leader>lcd :lcd %:h <bar> pwd<cr>
+nnoremap <Leader>cd :cd %:h <bar> pwd<cr>
+nnoremap <Leader>lcd :lcd %:h <bar> pwd<cr>
 
 " Copy the current fully-qualified filename and filepath into the clipboard
-nmap <Leader>fn :let @+=expand("%:p")<cr>
-nmap <Leader>fp :let @+=expand("%:p:h")<cr>
+nnoremap <Leader>fn :let @+=expand("%:p")<cr>
+nnoremap <Leader>fp :let @+=expand("%:p:h")<cr>
 
 " Trim trailing spaces
-nmap <Leader>tts :%s/\s\+$//g<CR><C-O>
+nnoremap <Leader>tts :%s/\s\+$//g<CR><C-O>
 
 " Twiddle words right and left.
 " With very-magic turned on:
@@ -309,19 +309,19 @@ nmap <Leader>tts :%s/\s\+$//g<CR><C-O>
 "     \_.         Any character, including end-of-line
 "     {-}         0 or more, but as few as possible (ie. like *, but not greedy)
 " See http://vim.wikia.com/wiki/Exchanging_adjacent_words
-nmap <Leader>tw :s/\v(<\k*%#\k*>)(\_.{-})(<\k+>)/\3\2\1/<CR><C-O>:set nohlsearch<CR>
-nmap <Leader>tW :s/\v(<\k+>)(.{-})(<\k*%#\k*>)/\3\2\1/<CR><C-O>:set nohlsearch<CR>
+nnoremap <Leader>tw :s/\v(<\k*%#\k*>)(\_.{-})(<\k+>)/\3\2\1/<CR><C-O>:set nohlsearch<CR>
+nnoremap <Leader>tW :s/\v(<\k+>)(.{-})(<\k*%#\k*>)/\3\2\1/<CR><C-O>:set nohlsearch<CR>
 
 " Preview the current file in the browser
 " I have yet to work out a way to make this OS-independent
-nmap <Leader>wb :!firefox '%' &<cr>
+nnoremap <Leader>wb :!firefox '%' &<cr>
 
 " Make the current file writable
 " I'd like to hook this one into CVS some time - branch the current file
-nmap <Leader>wr :silent !attrib -r %<CR>:set noreadonly<CR>
+nnoremap <Leader>wr :silent !attrib -r %<CR>:set noreadonly<CR>
 
 " Write and source the current file (works for vimrc)
-nmap <Leader>ws :w<CR>:source %<CR>
+nnoremap <Leader>ws :w<CR>:source %<CR>
 
 "-------------------------------------- Window and buffer behaviour ---------------------------------------------------
 
@@ -340,15 +340,15 @@ set splitright             " I prefer new vertical splits to appear on the right
 set showtabline=0          " Never show the irritating tab line at the top of the console
 
 " Ctrl-Tab to rotate between open buffers within the current window
-nmap <C-Tab> :bn<CR>
-nmap <C-S-Tab> :bp<CR>
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
 
 " Go up or down one window and maximise it
 " Move left and right one window won't change the window sizes
-nmap <Leader>j <C-W>j<C-W>_
-nmap <Leader>k <C-W>k<C-W>_
-nmap <Leader>h <C-W>h
-nmap <Leader>l <C-W>l
+nnoremap <Leader>j <C-W>j<C-W>_
+nnoremap <Leader>k <C-W>k<C-W>_
+nnoremap <Leader>h <C-W>h
+nnoremap <Leader>l <C-W>l
 
 "-------------------------------------- Custom commands ---------------------------------------------------------------
 
@@ -381,7 +381,7 @@ command! -nargs=+ Thes :!aiksaurus <args>
 let Tlist_WinWidth="45"
 
 " Open and close the tag list (taglist.vim):
-nmap <Leader>tl :Tlist<CR><C-W>h
+nnoremap <Leader>tl :Tlist<CR><C-W>h
 
 "-------------------------------------- Exuberant ctags --------------------------------------------------------------
 
