@@ -80,16 +80,16 @@ set wildmode=longest,list           " Tab complete till longest common string, t
 set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe     " Extensions to demote during tab-completion
 
 " Default indenting and wrap
-set autoindent          " Carry indent over to new lines
-set nojoinspaces        " Don't insert two spaces after . ? and ! with Join command
-set linebreak           " Word-wrap lines on screen at sensible characters, ie. not in the middle of words
+set autoindent             " Carry indent over to new lines
+set nojoinspaces           " Don't insert two spaces after . ? and ! with Join command
+set linebreak              " Word-wrap lines on screen at sensible characters, ie. not in the middle of words
 set breakat=\ \	!@*+;:,?   " But don't split filenames and paths
-set textwidth=128       " Maximum line length before inserting line break
-set virtualedit=block   " Allow the cursor to move past the end of the line in visual block mode
-set nowrap                    " Off by default - I have mapped F6 to toggle wrap
-set whichwrap=b,s,<,>,[,]     " Move to previous/next line on BS, space, left/right keys in normal & insert modes
-set nostartofline             " Don't move the cursor to the start of the line on page up/down (ctrl-U/D etc)
-set display=lastline          " Show as much as possible of the last line on screen, rather than just the @ symbols
+set textwidth=128          " Maximum line length before inserting line break
+set virtualedit=block      " Allow the cursor to move past the end of the line in visual block mode
+set nowrap                 " Off by default - I have mapped F6 to toggle wrap
+set whichwrap=b,s,<,>,[,]  " Move to previous/next line on BS, space, left/right keys in normal & insert modes
+set nostartofline          " Don't move the cursor to the start of the line on page up/down (ctrl-U/D etc)
+set display=lastline       " Show as much as possible of the last line on screen, rather than just the @ symbols
 
 " These are :set sr et sw=3 sts=3 ts=8
 set shiftround          " Round indent to multiples of shiftwidth with < and > commands
