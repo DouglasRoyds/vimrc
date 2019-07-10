@@ -83,6 +83,7 @@ set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe     " Extensions to demote 
 set autoindent          " Carry indent over to new lines
 set nojoinspaces        " Don't insert two spaces after . ? and ! with Join command
 set linebreak           " Word-wrap lines on screen at sensible characters, ie. not in the middle of words
+set breakat=\ \	!@*+;:,?   " But don't split filenames and paths
 set textwidth=128       " Maximum line length before inserting line break
 set virtualedit=block   " Allow the cursor to move past the end of the line in visual block mode
 set nowrap                    " Off by default - I have mapped F6 to toggle wrap
