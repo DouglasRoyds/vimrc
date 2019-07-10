@@ -61,6 +61,9 @@ nmap <Leader>bd :Bdelete<cr>
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
+" Enable file type detection, file-type plug-ins, and indent files
+filetype plugin indent on
+
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
 set backspace=indent,eol,start   " Allow backspacing over everything in insert mode
 
@@ -420,9 +423,6 @@ let VCSCommandDeleteOnHide="Yes"
 " This is required in case the vimrc is sourced twice (e.g. after editing), and is standard Vim practice (not my idea).
 augroup vimrc
    autocmd!
-
-   " Enable file type detection, file-type plug-ins, and indent files
-   filetype plugin indent on
 
    " When editing a file, always jump to the last known cursor position.
    " Don't do it when the position is invalid or when inside an event handler (when dropping a file on gvim).
