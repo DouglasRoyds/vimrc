@@ -7,9 +7,6 @@
 
 "-------------------------------------- Stuff from the standard vimrc file --------------------------------------------
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
 set cpoptions-=a        " Don't change the alternate filename when using :read file
 
 "-------------------------------------- Vundle ------------------------------------------------------------------------
