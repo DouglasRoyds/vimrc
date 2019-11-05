@@ -82,7 +82,7 @@ Back | Forward | To the start of the
 
 ### Horizontally
 
-Left   | Middle | Right  |
+Left   | Middle | Right  | ...
 ------ | ------ | ------ | ------------------------------------------------------------------------------------
 Ctrl-H |        | Ctrl-L | Move the cursor half a screen left/right (this is my own mapping)
 g^     | gM     | g$     | Move the cursor to the left, middle (my own mapping), or right side of the screen
