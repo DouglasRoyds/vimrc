@@ -217,9 +217,9 @@ To search in a selection:
 Type             | Where | ...
 ---------------- | ----- | ------------------
 :%s#this#that#gc |       | Search and replace
-                 | %     | Whole file
-                 | g     | Global replacements within each line
-                 | c     | Confirm each change
+:                | %     | Whole file
+:                | g     | Global replacements within each line
+:                | c     | Confirm each change
 :%s#pattern##gn  |       | Count. Does a search and replace, but doesn't actually do it, only reporting how many matches it found.
 
 When the target is a regular expression, it can be very difficult to get it right, so:
