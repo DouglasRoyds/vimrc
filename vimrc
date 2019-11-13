@@ -180,6 +180,7 @@ set smartcase
 "   3. **5 = All directories below the current working directory, but only 5 deep
 " When working within a project, I always (manually) set the current working directory to the root of the project.
 " cdpath default value is taken from $CDPATH, with a , prepended to look in the current directory first.
+" ... thoeretically: In practice, vim doesn't appear to be reading my $CDPATH at all.
 set path=.,,**5
 set cdpath+=**5
 
