@@ -6,17 +6,15 @@
 "
 " This sets up the syntax highlighting for BitBake files, like .bb, .bbclass and .inc
 
-if &compatible || version < 600
+if &compatible || version < 600 || exists("b:loaded_bitbake_plugin")
     finish
 endif
 
-" .bb and .bbclass
-"au BufNewFile,BufRead *.b{b,bclass}	set filetype=bitbake
-au BufNewFile,BufRead *.{bb,bbclass}	set filetype=sh
-au BufNewFile,BufRead *.bbappend	set filetype=sh
+" .bb, .bbappend and .bbclass
+au BufNewFile,BufRead *.{bb,bbappend,bbclass}  set filetype=sh
 
 " .inc
-au BufNewFile,BufRead *.inc 		set filetype=sh
+au BufNewFile,BufRead *.inc		set filetype=sh
 
 " .conf
 " But only if conf/ is in the fully-qualified path
@@ -24,3 +22,4 @@ au BufNewFile,BufRead *.conf
     \ if (match(expand("%:p:h"), "/conf/") > 0) |
     \     set filetype=sh |
     \ endif
+
