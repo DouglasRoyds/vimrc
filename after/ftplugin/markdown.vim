@@ -17,5 +17,4 @@ nnoremap <buffer> <LocalLeader>t5 I##### A #####
 "
 " This is a heading    <--- Place cursor on this line, and issue <Leader>toc
 " -----------------
-nnoremap <buffer> <LocalLeader>toc yyppkI * [A](#j0gu$:s# #-#gkJxA)
-
+nnoremap <buffer> <LocalLeader>toc yyppkI * [A](#j0gu$:s# #-#gekJxA)
