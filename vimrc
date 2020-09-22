@@ -98,6 +98,7 @@ set expandtab           " To spaces
 set shiftwidth=3        " Number of spaces to use
 set softtabstop=3       " Allows tabstop to remain at 8, but the Tab key inserts 3
 set tabstop=8           " For hard tab characters
+set modeline            " Might as well respect it if it's there
 
 " Text folding
 " These are Greg Bodnar's options, and I haven't investigated them yet
