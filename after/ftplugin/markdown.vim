@@ -9,9 +9,9 @@ setlocal softtabstop=4
 " Keyboard mappings that make the current line a two-line title, level 0 through 4
 nnoremap <buffer> <LocalLeader>t1 yypv$r=
 nnoremap <buffer> <LocalLeader>t2 yypv$r-
-nnoremap <buffer> <LocalLeader>t3 I### A ###
-nnoremap <buffer> <LocalLeader>t4 I#### A ####
-nnoremap <buffer> <LocalLeader>t5 I##### A #####
+nnoremap <buffer> <LocalLeader>t3 I### 
+nnoremap <buffer> <LocalLeader>t4 I#### 
+nnoremap <buffer> <LocalLeader>t5 I##### 
 
 " Generate a markdown table-of-contents line for this heading
 "
