@@ -348,11 +348,8 @@ nnoremap <C-Tab> :bn<CR>
 nnoremap <C-S-Tab> :bp<CR>
 
 " Go up or down one window and maximise it
-" Move left and right one window won't change the window sizes
 nnoremap <Leader>j <C-W>j<C-W>_
 nnoremap <Leader>k <C-W>k<C-W>_
-nnoremap <Leader>h <C-W>h
-nnoremap <Leader>l <C-W>l
 
 "-------------------------------------- Custom commands ---------------------------------------------------------------
 
