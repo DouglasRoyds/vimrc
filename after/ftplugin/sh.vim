@@ -7,5 +7,5 @@ setlocal shiftwidth=3
 setlocal softtabstop=3
 
 " Add a debug message for the variable under the cursor
-nnoremap <buffer> <Leader>dm yiwoecho "<Esc>pA = ${<Esc>pA}"<Esc>
+nnoremap <buffer> <Leader>dm yiwoecho "<Esc>pA=$<Esc>pA"<Esc>
 
