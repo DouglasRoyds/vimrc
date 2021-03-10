@@ -297,6 +297,7 @@ let maplocalleader=","
 " Change directory to that containing the current file
 nnoremap <Leader>cd :cd %:h <bar> pwd<cr>
 nnoremap <Leader>lcd :lcd %:h <bar> pwd<cr>
+nnoremap <Leader>.. :lcd .. <bar> pwd<cr>
 
 " Copy the current fully-qualified filename and filepath into the clipboard
 nnoremap <Leader>fn :let @+=expand("%:p")<cr>
