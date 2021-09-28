@@ -34,7 +34,7 @@ function! GitSetBufferMappings(filename)
    nnoremap <buffer> <LocalLeader>vss :Gstatus <cr>
    nnoremap <buffer> <LocalLeader>vdd :Git diff % <cr>
    nnoremap <buffer> <LocalLeader>vda :Git diff -D -M <cr>
-   nnoremap <buffer> <LocalLeader>vlo :Git log --oneline --graph --decorate --all <cr>
+   nnoremap <buffer> <LocalLeader>vlo :Git log --oneline --graph --decorate <cr>
 
    " Set colour white and clear the screen
    " Just while git-gutter is still tripping up the console output
