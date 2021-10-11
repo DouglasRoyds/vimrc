@@ -271,12 +271,12 @@ vnoremap <silent> T :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g<CR>
 " vimdiff
 " do and dp work fine, but they don't jump to the next diff.
 " In visual mode, do the get or put, but don't jump to the next diff.
-" Further to vim-unimpaired's cod to toggle diffthis, I commonly want to just turn the lot off, hence coD
+" Further to vim-unimpaired's yod to toggle diffthis, I commonly want to just turn the lot off, hence yoD
 nnoremap do :diffget<CR>]c
 nnoremap dp :diffput<CR>]c
 vnoremap do :diffget<CR>
 vnoremap dp :diffput<CR>
-nnoremap coD :diffoff!<CR>
+nnoremap yoD :diffoff!<CR>
 
 " I type :w<CR> in my code a lot
 inoremap :w<CR> <C-O>:w<CR>
