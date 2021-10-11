@@ -31,7 +31,7 @@ function! GitSetBufferMappings(filename)
 
    nnoremap <buffer> <LocalLeader>git :execute 'lcd' fnameescape(b:git_repo_dir) <bar> pwd <cr>
    nnoremap <buffer> <LocalLeader>vs  :Git status <cr>
-   nnoremap <buffer> <LocalLeader>vss :Gstatus <cr>
+   nnoremap <buffer> <LocalLeader>vss :Git <cr>
    nnoremap <buffer> <LocalLeader>vdd :Git diff % <cr>
    nnoremap <buffer> <LocalLeader>vda :Git diff -D -M <cr>
    nnoremap <buffer> <LocalLeader>vlo :Git log --oneline --graph --decorate <cr>
