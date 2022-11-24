@@ -1,9 +1,8 @@
 " Douglas's vimrc
 " Contains settings that apply equally to either Windows or Linux platforms, and any workstation.
-" Specific configuration files for Windows, Gnome, WS1788, and so on are in the vimfiles/plugins directory.
-" On Windows, symlink _vimrc and _gvimrc into $HOME (C:\Users\UserName) using the mklink command (as admin).
-" Note that the path to the target file must be fully-qualified:
-"     C:\Users\UserName> mklink _vimrc C:\Users\UserName\vimfiles\_vimrc
+" Specific configuration files for Windows, Gnome, hostname, and so on can be put in the plugins directory.
+" On Windows, make a directory junction $HOME/vimfiles (C:\Users\UserName):
+"     C:\Users\UserName> mklink /J vimfiles workspace\vimrc
 
 "-------------------------------------- Stuff from the standard vimrc file --------------------------------------------
 
