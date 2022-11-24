@@ -199,6 +199,9 @@ set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
 
+set <S-F3>=[1;2R
+set <S-F8>=[19;2~
+
 "       F3 will be Grep - Grep within this file
 " Shift-F3 will be recursive grep
 " Shift-F3 isn't working for now, so I'll make straight F3 do the recursive grep
