@@ -4,20 +4,13 @@
 " On Windows, make a directory junction $HOME/vimfiles (C:\Users\UserName):
 "     C:\Users\UserName> mklink /J vimfiles workspace\vimrc
 
-"-------------------------------------- Stuff from the standard vimrc file --------------------------------------------
-
-set cpoptions-=a        " Don't change the alternate filename when using :read file
-
 "-------------------------------------- Vundle ------------------------------------------------------------------------
 " See https://github.com/VundleVim/Vundle.vim
 
-" Initialise
 filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim/,$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin()
-
-" Vundle must manage Vundle (required)
-Plugin 'https://github.com/VundleVim/Vundle.vim'
+Plugin 'https://github.com/VundleVim/Vundle.vim'         " Vundle must manage Vundle (required)
 
 Plugin 'https://github.com/airblade/vim-gitgutter'       " Jump with ]c, stage/unstage hunks with <Leader>hs/hu
 Plugin 'https://github.com/chrisbra/unicode.vim'         " Digraph search, autocompletion
@@ -27,12 +20,12 @@ Plugin 'https://github.com/justinmk/vim-sneak'           " ff and FF movements
 Plugin 'https://github.com/moll/vim-bbye'                " Bdelete buffers without wrecking my window layout
 Plugin 'https://github.com/tpope/vim-abolish'            " Subvert/child{,ren}/adult{,s}/g and coerce case with crs/m/c/u
 Plugin 'https://github.com/tpope/vim-commentary'         " Comment stuff out with gcc, gcap, (visual) gc
-Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and the magic F9 key
-Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git, and the magic :Gstatus
+Plugin 'https://github.com/tpope/vim-dispatch'           " Make and test in the background using tmux and F9
+Plugin 'https://github.com/tpope/vim-fugitive'           " All things :Git and :Gstatus
 Plugin 'https://github.com/tpope/vim-repeat'             " Makes the . command work with plugins, notably vim-surround
 Plugin 'https://github.com/tpope/vim-speeddating'        " Ctrl-A/X for dates and times
 Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
-Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q for :cnext, and coh for :set hlsearch!
+Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q for :cnext, and yoh for :set hlsearch!
 Plugin 'https://github.com/tpope/vim-vinegar'            " Press - for a directory listing
 Plugin 'https://github.com/vim-scripts/DirDiff.vim'      " DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
@@ -47,7 +40,7 @@ Plugin 'https://github.com/cocopon/iceberg.vim'
 Plugin 'https://github.com/sainnhe/everforest'
 
 call vundle#end()             " Required
-filetype plugin indent on     " Required
+filetype plugin indent on     " Reenable file type detection, file-type plug-ins, and indent files (required)
 
 "-------------------------------------- Plug-in settings --------------------------------------------------------------
 
@@ -70,54 +63,47 @@ noremap <Leader>bd :Bdelete<cr>
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
-" Enable file type detection, file-type plug-ins, and indent files
-filetype plugin indent on
-
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
 set backspace=indent,eol,start   " Allow backspacing over everything in insert mode
 
+set cpoptions-=a                    " Don't change the alternate filename when using :read file
+set cryptmethod=blowfish            " Use :X to turn on encryption for a file
+set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
+set fileformats=unix,dos,mac        " Mac isn't in the default set
+set foldenable                      " On by default, toggle it with zi
+set foldlevelstart=1                " Start with all but the top-level folds closed
 set history=1000                    " lines of command-line history
+set listchars=eol:$,tab:T-,trail:.  " Special characters to display when :set list is on
+set matchpairs=(:),{:},[:]          " Characters that form pairs for the % command
+set nobackup
 set ruler                           " show the cursor position all the time
 set showcmd                         " display incomplete commands
-set fileformats=unix,dos,mac        " Mac isn't in the default set
-set nobackup
-set cryptmethod=blowfish            " Use :X to turn on encryption for a file
-set matchpairs=(:),{:},[:]          " Characters that form pairs for the % command
-set diffopt=filler,vertical         " Show filler lines (useful for vertical splits), default to vertical diff
-set listchars=eol:$,tab:T-,trail:.  " Special characters to display when :set list is on
+set t_vb=                           " Turn the visualbell on, but set it to nothing at all
+set visualbell                      " Complete silence. No flashing, no beeping, nothing.
 set wildmode=longest,list           " Tab complete till longest common string, then list all matches
+
 set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe     " Extensions to demote during tab-completion
 
 " Default indenting and wrap
 set autoindent             " Carry indent over to new lines
-set nojoinspaces           " Don't insert two spaces after . ? and ! with Join command
-set linebreak              " Word-wrap lines on screen at sensible characters, ie. not in the middle of words
 set breakat=\ \	!@*+;:,?=  " But don't split filenames and paths
 set breakindent            " Do indent lines wrapped by linebreak
+set display=lastline       " Show as much as possible of the last line on screen, rather than just the @ symbols
+set linebreak              " Word-wrap lines on screen at sensible characters, ie. not in the middle of words
+set nojoinspaces           " Don't insert two spaces after . ? and ! with Join command
+set nostartofline          " Don't move the cursor to the start of the line on page up/down (ctrl-U/D etc)
+set nowrap                 " Off by default - I have mapped F6 to toggle wrap
 set textwidth=107          " Maximum line length before inserting line break
 set virtualedit=block      " Allow the cursor to move past the end of the line in visual block mode
-set nowrap                 " Off by default - I have mapped F6 to toggle wrap
 set whichwrap=b,s,<,>,[,]  " Move to previous/next line on BS, space, left/right keys in normal & insert modes
-set nostartofline          " Don't move the cursor to the start of the line on page up/down (ctrl-U/D etc)
-set display=lastline       " Show as much as possible of the last line on screen, rather than just the @ symbols
 
 " These are :set sr et sw=3 sts=3 ts=8
-set shiftround          " Round indent to multiples of shiftwidth with < and > commands
 set expandtab           " To spaces
+set modeline            " Might as well respect it if it's there
+set shiftround          " Round indent to multiples of shiftwidth with < and > commands
 set shiftwidth=3        " Number of spaces to use
 set softtabstop=3       " Allows tabstop to remain at 8, but the Tab key inserts 3
 set tabstop=8           " For hard tab characters
-set modeline            " Might as well respect it if it's there
-
-" Text folding
-" These are Greg Bodnar's options, and I haven't investigated them yet
-set foldenable
-set foldlevelstart=1
-
-" Complete silence. No flashing, no beeping, nothing.
-" Turn the visualbell on, but set it to nothing at all
-set visualbell
-set t_vb=
 
 "-------------------------------------- Colours -----------------------------------------------------------------------
 
