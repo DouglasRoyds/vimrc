@@ -202,27 +202,16 @@ set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 "       F3 will be Grep - Grep within this file
 " Shift-F3 will be recursive grep
 " Shift-F3 isn't working for now, so I'll make straight F3 do the recursive grep
-"  Ctrl-F3 will be toggle highlight search
 noremap <F3>   :grep '<C-R><C-W>' -rn .
 noremap <S-F3> :grep <C-R><C-W> -rn .
 inoremap <F3>   <C-O><F3>
 inoremap <S-F3> <C-O><S-F3>
-inoremap <C-F3> <C-O><C-F3>
-
-" Ctrl-F4 will close the current window and buffer
-" Use Ctrl-Shift-F4 if the file hasn't been saved
-nnoremap <C-F4> :bd<CR>
-nnoremap <C-S-F4> :bd!<CR>
 
 " Toggle word-wrap
 nnoremap <F6> :setl wrap!<bar>:set wrap?<CR>
 inoremap <F6> <C-O><F6>
 
 nnoremap <F9> :Dispatch<CR>
-
-" Toggle spell-check
-nnoremap <F12> :set spell!<CR>
-inoremap <F12> <C-O><F12>
 
 "-------------------------------------- Key-stroke mappings -----------------------------------------------------------
 
