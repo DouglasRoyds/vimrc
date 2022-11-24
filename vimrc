@@ -405,11 +405,6 @@ augroup ctags
    "autocmd BufWritePost *.{c,h,cpp,hpp} :silent !cd %:p:h && ctags -R --extra=+q --fields=+iaS --c++-kinds=+p
 augroup END
 
-"-------------------------------------- VCSCommand plug-in -----------------------------------------------------------
-
-" Automatically delete temporary VCS result buffers when hidden.
-let VCSCommandDeleteOnHide="Yes"
-
 "-------------------------------------- Autocommands -----------------------------------------------------------------
 " Put everything in an autocmd group, so that we can delete them easily with the autocmd! command.
 " This is required in case the vimrc is sourced twice (e.g. after editing), and is standard Vim practice (not my idea).
