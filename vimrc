@@ -202,11 +202,10 @@ set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 set <S-F3>=[1;2R
 set <S-F8>=[19;2~
 
-"       F3 will be Grep - Grep within this file
-" Shift-F3 will be recursive grep
-" Shift-F3 isn't working for now, so I'll make straight F3 do the recursive grep
-noremap <F3>   :grep '<C-R><C-W>' -rn .
-noremap <S-F3> :grep <C-R><C-W> -rn .
+"       F3 = Grep for the word under the cursor
+" Shift-F3 = Grep only in this file's subdirectory (and its children)
+noremap <F3>   :grep '<C-R><C-W>'
+noremap <S-F3> :grep '<C-R><C-W>' %:h
 inoremap <F3>   <C-O><F3>
 inoremap <S-F3> <C-O><S-F3>
 
