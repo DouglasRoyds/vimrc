@@ -36,6 +36,16 @@ Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q
 Plugin 'https://github.com/tpope/vim-vinegar'            " Press - for a directory listing
 Plugin 'https://github.com/vim-scripts/DirDiff.vim'      " DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
+" Colorschemes
+Plugin 'https://github.com/felixhummel/setcolors.vim'
+Plugin 'https://github.com/morhetz/gruvbox'
+Plugin 'https://github.com/nanotech/jellybeans.vim'
+Plugin 'https://github.com/w0ng/vim-hybrid'
+Plugin 'https://github.com/sainnhe/gruvbox-material'
+Plugin 'https://github.com/sainnhe/sonokai'
+Plugin 'https://github.com/cocopon/iceberg.vim'
+Plugin 'https://github.com/sainnhe/everforest'
+
 call vundle#end()             " Required
 filetype plugin indent on     " Required
 
@@ -137,10 +147,24 @@ highlight CursorLine ctermbg=234
 highlight CursorColumn cterm=none term=none
 highlight CursorColumn ctermbg=234
 
-" Brute-force.
-" TODO:  What's the elegant way of doing this?
-" Setting ctermfg=6 turns off the cterm=bold bit
-highlight Comment ctermfg=6
+let g:jellybeans_use_gui_italics = 0
+let g:jellybeans_overrides = { 'Search': {'attr': 'reverse'} }    " Underline begone
+let g:gruvbox_italic = 0
+let g:gruvbox_material_disable_italic_comment = 1
+let g:sonokai_disable_italic_comment = 1
+let g:everforest_disable_italic_comment = 1
+
+" The setcolors.vim script is sourced very late in the list of scriptnames,
+" so the SetColors command is not available while sourcing the vimrc file.
+augroup setcolors
+   autocmd!
+   autocmd VimEnter * SetColors industry torte jellybeans gruvbox gruvbox-material hybrid sonokai iceberg everforest
+   autocmd VimEnter * nnoremap <F8>   :call NextColor(1) <CR>:hi Normal guibg=NONE ctermbg=NONE<CR>:colorscheme<CR>
+   autocmd VimEnter * nnoremap <S-F8> :call NextColor(-1)<CR>:hi Normal guibg=NONE ctermbg=NONE<CR>:colorscheme<CR>
+augroup END
+colorscheme jellybeans
+
+hi Normal guibg=NONE ctermbg=NONE
 
 "-------------------------------------- Printing ----------------------------------------------------------------------
 
