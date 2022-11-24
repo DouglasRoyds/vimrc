@@ -185,8 +185,13 @@ set printheader=%>%t%=Page\ %N
 " Use ctrl-X-K/P to browse dictionary completions
 set nospell
 set spelllang=en_nz
-set spellfile=~/.vim/douglas.add,~/.vim/code.add
 set spellsuggest=9
+if ! exists('+shellslash')    " ie. we're not on Windows
+   " I have found no way of specifying a drive name under Windows
+   " This works:     /Users/Us/vimfiles/douglas.add
+   " This doesn't: C:/Users/Us/vimfiles/douglas.add
+   set spellfile=~/.vim/douglas.add,~/.vim/code.add
+endif
 
 " Use ctrl-X-T/P to browse thesaurus completions
 set thesaurus=~/.vim/mthesaur.txt
