@@ -14,6 +14,7 @@ Plugin 'https://github.com/VundleVim/Vundle.vim'         " Vundle must manage Vu
 
 Plugin 'https://github.com/airblade/vim-gitgutter'       " Jump with ]c, stage/unstage hunks with <Leader>hs/hu
 Plugin 'https://github.com/chrisbra/unicode.vim'         " Digraph search, autocompletion
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'           " Fuzzy file, buffer, most-recently-used, ctag finder
 Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim file in the root of a project directory
 Plugin 'https://github.com/jceb/vim-shootingstar'        " Like the magic * but start matching at the cursor position
 Plugin 'https://github.com/justinmk/vim-sneak'           " ff and FF movements
@@ -73,6 +74,12 @@ noremap <Leader>bd :Bdelete<cr>
 "     Set the mintty font to SourceCodePro for Powerline.
 let g:airline_theme='deus'
 let g:airline_powerline_fonts = 1
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
