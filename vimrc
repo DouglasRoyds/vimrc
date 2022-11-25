@@ -27,6 +27,8 @@ Plugin 'https://github.com/tpope/vim-speeddating'        " Ctrl-A/X for dates an
 Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
 Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q for :cnext, and yoh for :set hlsearch!
 Plugin 'https://github.com/tpope/vim-vinegar'            " Press - for a directory listing
+Plugin 'https://github.com/vim-airline/vim-airline'      " Statusline
+Plugin 'https://github.com/vim-airline/vim-airline-themes'
 Plugin 'https://github.com/vim-scripts/DirDiff.vim'      " DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
 " Colorschemes
@@ -60,6 +62,17 @@ nmap FF <Plug>SneakBackward
 "vmap FF <Plug>SneakBackward
 
 noremap <Leader>bd :Bdelete<cr>
+
+" Instructions at https://vi.stackexchange.com/a/16512
+" Linux:
+"     $ sudo apt install fonts-powerline
+"     Don't use the font directly, just check that SourceCodePro for Powerline is available.
+" Windows:
+"     $ git clone --depth 1 https://github.com/powerline/fonts
+"     Install the Adobe SourceCodePro fonts by dragging and dropping them (all) into the Fonts Settings.
+"     Set the mintty font to SourceCodePro for Powerline.
+let g:airline_theme='deus'
+let g:airline_powerline_fonts = 1
 
 "-------------------------------------- Default settings --------------------------------------------------------------
 
