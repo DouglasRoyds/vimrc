@@ -8,5 +8,4 @@ set guioptions-=m                   " No menu bar
 set guioptions-=T                   " No toolbar buttons
 
 set cursorline
-highlight cursorline guibg=Grey97
 
