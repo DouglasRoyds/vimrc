@@ -42,6 +42,11 @@ Plugin 'https://github.com/sainnhe/sonokai'
 Plugin 'https://github.com/cocopon/iceberg.vim'
 Plugin 'https://github.com/sainnhe/everforest'
 
+" Code completion using clangd, must be recompiled after update:
+"     $ cd bundle/YouCompleteMe/
+"     $ ./install.py --clangd-completer
+Plugin 'https://github.com/ycm-core/YouCompleteMe'
+
 call vundle#end()             " Required
 filetype plugin indent on     " Reenable file type detection, file-type plug-ins, and indent files (required)
 
@@ -248,6 +253,8 @@ nnoremap <F6> :setl wrap!<bar>:set wrap?<CR>
 inoremap <F6> <C-O><F6>
 
 nnoremap <F9> :Dispatch<CR>
+
+nnoremap <F12> :YcmCompleter GoTo<CR>
 
 "-------------------------------------- Key-stroke mappings -----------------------------------------------------------
 
