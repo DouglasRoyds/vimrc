@@ -34,7 +34,7 @@ Plugin 'https://github.com/tpope/vim-speeddating'        " Ctrl-A/X for dates an
 Plugin 'https://github.com/tpope/vim-surround'           " Parentheses and quotes etc. with cs), ds>, ysiw], etc.
 Plugin 'https://github.com/tpope/vim-unimpaired'         " Many mappings, eg. ]q for :cnext, and coh for :set hlsearch!
 Plugin 'https://github.com/tpope/vim-vinegar'            " Press - for a directory listing
-Plugin 'https://github.com/vim-scripts/DirDiff.vim.git'  " DirDiff dirA dirB<cr>, <CR> on a file to diff it
+Plugin 'https://github.com/vim-scripts/DirDiff.vim'      " DirDiff dirA dirB<cr>, <CR> on a file to diff it
 
 call vundle#end()             " Required
 filetype plugin indent on     " Required
