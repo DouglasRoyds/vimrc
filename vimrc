@@ -15,6 +15,7 @@ Plugin 'https://github.com/VundleVim/Vundle.vim'         " Vundle must manage Vu
 Plugin 'https://github.com/airblade/vim-gitgutter'       " Jump with ]c, stage/unstage hunks with <Leader>hs/hu
 Plugin 'https://github.com/chrisbra/unicode.vim'         " Digraph search, autocompletion
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'           " Fuzzy file, buffer, most-recently-used, ctag finder
+Plugin 'https://github.com/drmikehenry/vim-fixkey'       " Non-ASCII terminal keys, eg. <S-F3>, <M-F3>
 Plugin 'https://github.com/embear/vim-localvimrc'        " Source .local.vim file in the root of a project directory
 Plugin 'https://github.com/jceb/vim-shootingstar'        " Like the magic * but start matching at the cursor position
 Plugin 'https://github.com/justinmk/vim-sneak'           " ff and FF movements
@@ -237,9 +238,6 @@ set isfname=@,48-57,/,.,-,_,+,#,$,%,~
 set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 
 "-------------------------------------- Function keys -----------------------------------------------------------------
-
-set <S-F3>=[1;2R
-set <S-F8>=[19;2~
 
 "       F3 = Grep for the word under the cursor
 " Shift-F3 = Grep only in this file's subdirectory (and its children)
