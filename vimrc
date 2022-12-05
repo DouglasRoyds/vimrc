@@ -154,10 +154,9 @@ endif
 " I set the cursorline on with an autocmd on WinEnter (see the autocmds section below).
 " With the aid of vim-unimpaired, cursorcolumn can be toggled with cou
 set cursorline
-highlight CursorLine cterm=none term=none
-highlight CursorLine ctermbg=234
-highlight CursorColumn cterm=none term=none
-highlight CursorColumn ctermbg=234
+highlight CursorLine   cterm=NONE term=NONE ctermbg=234
+highlight CursorColumn cterm=NONE term=NONE ctermbg=234
+highlight Normal     ctermbg=NONE guibg=NONE
 
 let g:jellybeans_use_gui_italics = 0
 let g:jellybeans_overrides = { 'Search': {'attr': 'reverse'} }    " Underline begone
@@ -171,12 +170,12 @@ let g:everforest_disable_italic_comment = 1
 augroup setcolors
    autocmd!
    autocmd VimEnter * SetColors industry torte jellybeans gruvbox gruvbox-material hybrid sonokai iceberg everforest
-   autocmd VimEnter * nnoremap <F8>   :call NextColor(1) <CR>:hi Normal guibg=NONE ctermbg=NONE<CR>:colorscheme<CR>
-   autocmd VimEnter * nnoremap <S-F8> :call NextColor(-1)<CR>:hi Normal guibg=NONE ctermbg=NONE<CR>:colorscheme<CR>
+   autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE                   " Always transparent background
+   autocmd ColorScheme * highlight CursorColumn cterm=NONE term=NONE ctermbg=234    " No underline cursorline, thanks
+   autocmd ColorScheme * highlight CursorLine   cterm=NONE term=NONE ctermbg=234
+   autocmd ColorScheme * highlight VertSplit    cterm=NONE term=NONE ctermbg=234
 augroup END
 colorscheme jellybeans
-
-hi Normal guibg=NONE ctermbg=NONE
 
 "-------------------------------------- Printing ----------------------------------------------------------------------
 
