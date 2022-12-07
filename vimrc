@@ -240,14 +240,14 @@ set grepprg=ack\ -H\ --ignore-dir=generated\ --nohtml
 
 "       F3 = Grep for the word under the cursor
 " Shift-F3 = Grep only in this file's subdirectory (and its children)
-noremap <F3>   :grep '<C-R><C-W>'
+noremap   <F3> :grep '<C-R><C-W>'
 noremap <S-F3> :grep '<C-R><C-W>' %:h
-inoremap <F3>   <C-O><F3>
-inoremap <S-F3> <C-O><S-F3>
+imap      <F3> <C-O><F3>
+imap    <S-F3> <C-O><S-F3>
 
 " Toggle word-wrap
 nnoremap <F6> :setl wrap!<bar>:set wrap?<CR>
-inoremap <F6> <C-O><F6>
+imap     <F6> <C-O><F6>
 
 nnoremap <F9> :Dispatch<CR>
 
