@@ -161,15 +161,15 @@ gqj         | Reformat only the current line. This is safer than gqap, and you c
 
 Install Tim Pope's [vim-surround][2] plug-in.
 
-Command        | Old text   | New text     | Comment
--------------- | ---------- | ------------ | ----------------------------------------------------
-ds"            | "Fred"     | Fred         | Delete surrounding quotes
-cs])           | [123]      | (123)        | Use the right-bracket form for no intervening spaces
-cs"<p>         | "Text"     | <p>Text</p>  |
-cit            | <p>Old</p> | <p>New</p>   | Change inner tag
-ysW)           | x>3        | (x>3)        | You surround (wait ...) Word with parentheses
-yss<p>         | Line       | <p>Line</p>  | You surround whole line
-v<movement>S"  | Ginger     | "Ginger"     | visual Surround
+Command        | Old text     | New text      | Comment
+-------------- | ------------ | ------------- | ----------------------------------------------------
+ds"            | "Fred"       | Fred          | Delete surrounding quotes
+cs])           | [123]        | (123)         | Use the right-bracket form for no intervening spaces
+cs"\<p>        | "Text"       | \<p>Text\</p> |
+cit            | \<p>Old\</p> | \<p>New\</p>  | Change inner tag
+ysW)           | x>3          | (x>3)         | You surround Word with parentheses
+yss\<p>        | Line         | \<p>Line\</p> | You surround whole line
+v\<movement>S" | Ginger       | "Ginger"      | visual Surround
 
 
 Searching
