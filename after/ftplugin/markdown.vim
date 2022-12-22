@@ -5,6 +5,7 @@
 
 setlocal shiftwidth=4
 setlocal softtabstop=4
+setlocal textwidth=80
 
 " Keyboard mappings that make the current line a two-line title, level 0 through 4
 nnoremap <buffer> <LocalLeader>t1 yypv$r=
