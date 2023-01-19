@@ -81,7 +81,6 @@ noremap <Leader>bd :Bdelete<cr>
 let g:airline_theme='deus'
 let g:airline_powerline_fonts = 1
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -106,6 +105,8 @@ set ruler                           " show the cursor position all the time
 set showcmd                         " display incomplete commands
 set t_vb=                           " Turn the visualbell on, but set it to nothing at all
 set visualbell                      " Complete silence. No flashing, no beeping, nothing.
+set wildignore=*.so,*.swp,*.zip     " Tab-completion file globs to ignore
+set wildignorecase                  " Case-insensitive Tab completion
 set wildmode=longest,list           " Tab complete till longest common string, then list all matches
 
 set suffixes=.bak,~,.swp,.o,.log,.dvi,.idx,.toc,.dxe     " Extensions to demote during tab-completion
