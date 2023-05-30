@@ -86,6 +86,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+" Don't use Vim's sw=2 sts=2 default settings, see /usr/share/vim/vim82/ftplugin/yaml.vim
+let g:yaml_recommended_style = 0
+
 "-------------------------------------- Default settings --------------------------------------------------------------
 
 " This is overwritten by the mswin.vim settings - I don't know what these settings should be in the general case
