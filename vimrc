@@ -262,6 +262,10 @@ nnoremap <F12> :YcmCompleter GoTo<CR>
 " Backspace key will delete, not just move the cursor
 nnoremap <BS> X
 
+" Unset the last search pattern by hitting return, removing highlighting without turning hlsearch off
+" From https://stackoverflow.com/a/662914/2411520
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
+
 " Back and forward to previous/next location, browser-style
 nnoremap <M-Left> <C-O>
 nnoremap <M-Right> <Tab>
